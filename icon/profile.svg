@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000" height="150" width="150" version="1.1">
+   <style id="style">
+    path.base{fill:#f8f4e6;}
+    path.red{fill:#ba2636;}
+    path.line{fill:#0c0c0c;}
+  </style>
   <path
     id="base1"
     class="base"
