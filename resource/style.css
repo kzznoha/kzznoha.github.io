@@ -497,7 +497,7 @@ a:hover{
 	padding:.2rem;
 	display:flex;
 	justify-content:space-between;
-	alien-items:center;
+	align-items:center;
 	border-top:solid 1px var(--gray);
 	border-bottom:solid 1px var(--gray);
 }
