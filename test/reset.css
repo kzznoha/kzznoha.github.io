@@ -1,38 +1,38 @@
 *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
-  all: unset;
-  display: revert;
+	all: unset;
+	display: revert;
 }
-*, *::after, *::before{
+*, *::after, *::before {
 	box-sizing: border-box;
 	font: inherit;
 	margin: 0;
 	padding: 0;
 }
-html{
+html {
 	font-size: 62.5%;
 }
-body{
+body {
 	height: 100%;
-  min-height: 100vh;
-  word-break: break-word;
+	min-height: 100vh;
+	word-break: break-word;
 	overflow-wrap: break-word;
 	text-align: justify;
 	font-synthesis: none;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hr, blockquote, img{
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hr, blockquote, img {
 	display: block;
 }
-iframe, canvas, svg, video, img{
-  max-width: 100%;
+iframe, canvas, svg, video, img {
+	max-width: 100%;
 	height: auto;
 	vertical-align: bottom;
 }
-rt, sup, sub{
+rt, sup, sub {
 	font-size: 0.7em;
 }
-table{
-  border-collapse: collapse;
+table {
+	border-collapse: collapse;
 }
-textarea{
-  white-space: pre-wrap;
+textarea {
+	white-space: pre-wrap;
 }
