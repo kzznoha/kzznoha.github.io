@@ -108,12 +108,6 @@
 	content: counter(hl2) "."counter(hl3) "."counter(hl4) "."counter(hl5) "."counter(hl6);
 }
 
-/*DESIGN*/
-#article section {
-	padding-left: 1em;
-	border-left: 1px dotted var(--text);
-}
-
 /*A*/
 #tarticle a {
 	text-decoration: underline;
