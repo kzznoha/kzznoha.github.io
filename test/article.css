@@ -1,31 +1,33 @@
 /*TOC*/
-#toc-label{
+#toc-label {
 	font-size: 1.2em;
 }
-#toc details{
+#toc details {
 	border: none;
 }
-#toc-inner ol{
+#toc-inner ol {
 	counter-reset: toc;
 	list-style-type: none;
-	padding-left: none;
 }
-#toc-inner li{
+#toc-inner>ol{
+	padding: 0 1em;
+	margin: 0;
+}
+#toc-inner li {
 	counter-increment: toc;
 }
-#toc-inner li a::before{
+#toc-inner li a::before {
 	content: counters(toc, ".") " ";
 	color: var(--text);
 }
-#toc-inner>ol>li>a{
+#toc-inner>ol>li>a {
 	display: flex;
 	font-size: 1.6rem;
 	align-items: center;
 }
-#toc-inner>ol>li>a::before{
+#toc-inner>ol>li>a::before {
 	background-color: var(--text);
 	margin-right: 0.5rem;
-
 	color: var(--back);
 	display: inline-block;
 	border-radius: 50%;
@@ -35,32 +37,31 @@
 	line-height: var(--icon-size);
 }
 
-
-
 /*HEADLINE*/
-#article *:where(h2, h3, h4, h5, h6:not(aside h6)){
+#article *:where(h2, h3, h4, h5, h6:not(aside h6)) {
 	padding: 0 0.5em;
 	margin: 1em 0 0.5em;
 }
-#article h2{
+#article h2 {
 	counter-increment: hl2 1;
 	counter-reset: hl3;
 	font-size: 1.5em;
 	font-weight: bold;
 	border: 3px solid var(--text);
 	position: relative;
+	margin-right: 0.5rem;
 }
-#article h2::after{
+#article h2::after {
 	content: "";
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  width: calc(100% + 0.25rem);
-  height: calc(100% + 0.25rem);
-  background-color: var(--main);
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	width: calc(100% + 0.25rem);
+	height: calc(100% + 0.25rem);
+	background-color: var(--main);
 	z-index: -1;
 }
-#article h3{
+#article h3 {
 	counter-increment: hl3 1;
 	counter-reset: hl4;
 	font-size: 1.5em;
@@ -68,7 +69,7 @@
 	border-style: none none solid solid;
 	background: repeating-linear-gradient(-45deg, transparent, transparent 3px, var(--gray) 3px, var(--gray) 6px);
 }
-#article h4{
+#article h4 {
 	counter-increment: hl4 1;
 	counter-reset: hl5;
 	font-size: 1.3em;
@@ -76,131 +77,142 @@
 	border: 2px var(--text);
 	border-style: none none solid solid;
 }
-#article h5{
+#article h5 {
 	counter-increment: hl5 1;
 	counter-reset: hl6;
 	font-size: 1.2em;
 	border: 1px var(--text);
 	border-style: none none solid solid;
 }
-#article h6:not(aside h6){
+#article h6:not(aside h6) {
 	counter-increment: hl6 1;
 	font-size: 1.2em;
 	border-bottom: 3px double var(--text);
 }
-#article *:where(h2, h3, h4, h5, h6:not(aside h6))::before{
+#article *:where(h2, h3, h4, h5, h6:not(aside h6))::before {
 	padding-right: 0.5em;
 }
-#article h2::before{
+#article h2::before {
 	content: counter(hl2);
 }
-#article h3::before{
-	content: counter(hl2) "." counter(hl3);
+#article h3::before {
+	content: counter(hl2) "."counter(hl3);
 }
-#article h4::before{
-	content: counter(hl2) "." counter(hl3) "." counter(hl4);
+#article h4::before {
+	content: counter(hl2) "."counter(hl3) "."counter(hl4);
 }
-#article h5::before{
-	content: counter(hl2) "." counter(hl3) "." counter(hl4) "." counter(hl5);
+#article h5::before {
+	content: counter(hl2) "."counter(hl3) "."counter(hl4) "."counter(hl5);
 }
-#article h6:not(aside h6)::before{
-	content: counter(hl2) "." counter(hl3) "." counter(hl4) "." counter(hl5) "." counter(hl6);
+#article h6:not(aside h6)::before {
+	content: counter(hl2) "."counter(hl3) "."counter(hl4) "."counter(hl5) "."counter(hl6);
 }
 
 /*DESIGN*/
+#article section {
+	padding-left: 1em;
+	border-left: 1px dotted var(--text);
+}
+
 /*A*/
-#tarticle a{
+#tarticle a {
 	text-decoration: underline;
 }
+
 /*P*/
-#article p{
+#article p {
 	text-indent: 1em;
 }
+
 /*BOXES*/
-#article *:where(blockquote, dl, details, aside){
+#article *:where(blockquote, dl, details, aside) {
 	margin: var(--box);
 }
 
 /*EM*/
-#article em{
+#article em {
 	font-weight: bold;
 }
+
 /*STRONG, SMALL, S*/
+
 /*CITE*/
-#article cite{
+#article cite {
 	margin: 0 0.2em;
 	background-color: var(--gray);
 }
-#article cite::before{
+#article cite::before {
 	content: "[";
 }
-#article cite::after{
+#article cite::after {
 	content: "]";
 }
+
 /*Q, DFN, ABBR*/
+
 /*RUBY, DATA, TIME, CODE, VAR, SAMP, KBD, SUP, SUB*/
+
 /*OL, UL*/
-#article ol:not([class]){
+#article ol:not([class]) {
 	list-style-type: decimal;
 }
-#article ul:not([class]){
+#article ul:not([class]) {
 	list-style-type: square;
 }
-#article ol.count, ol.count ol{
+#article ol.count,
+ol.count ol {
 	counter-reset: list;
 	list-style: inside;
 }
-ol.count li{
+ol.count li {
 	counter-increment: list;
 }
-ol.count li::marker{
+ol.count li::marker {
 	content: counters(list, ".")" ";
 }
-.alpha{
+.alpha {
 	list-style-type: lower-latin;
 }
-.kansuji{
+.kansuji {
 	list-style-type: cjk-ideographic;
 }
 
 /*HR, PRE*/
 
 /*BLOCKQUOTE*/
-#article blockquote{
+#article blockquote {
 	padding: 1em;
 	border: 1px dashed var(--text);
 }
 
-
 /*MENU*/
 
 /*DL*/
-#article dl{
+#article dl {
 	padding: 0.5em;
 	background-color: var(--gray);
 }
-#article dt{
+#article dt {
 	font-style: normal;
 	color: var(--main);
 	font-size: 1.2em;
 }
-#article *:where(dl:not([class]) dt, dfn:not([class]))::before{
+#article *:where(dl:not([class]) dt, dfn:not([class]))::before {
 	content: "【";
 	color: var(--text);
 }
-#article *:where(dl:not([class]) dt, dfn:not([class]))::after{
+#article *:where(dl:not([class]) dt, dfn:not([class]))::after {
 	content: "】";
 	color: var(--text);
 }
-#article dd:not([class]){
+#article dd:not([class]) {
 	padding: 0 1em;
 }
-
 
 /*I, B, U, MARK, BDI, BDO, SPAN, BR, WBR, INS, DEL, PICTURE, SOUCE*/
 
 /*IMG, IFRAME, SVG(, TABLE)*/
-#article *:where(figure, img, iframe, svg, table){
+#article *:where(figure, img, iframe, svg, table) {
 	padding: var(--box);
 	width: 100%;
 }
@@ -208,38 +220,39 @@ ol.count li::marker{
 /*EMBED, OBJECT, PARAM, VIDEO, TRACK, MAP, AREA, MATH*/
 
 /*TABLE*/
-#article table.fixed{
+#article table.fixed {
 	table-layout: fixed;
 }
-#article *:where(th, td){
+#article *:where(th, td) {
 	padding: 0.5em 1em;
 	vertical-align: middle;
 }
-#article th{
+#article th {
 	text-align: center;
 	font-weight: bold;
 }
-#article tr:not(:first-child){
+#article tr:not(:first-child) {
 	border-top: 1px solid var(--text);
 }
-#article *:where(th, td):nth-child(2n){
+#article *:where(th, td):nth-child(2n) {
 	background-color: var(--gray);
 }
+
 /*TREE*/
-.tree{
+.tree {
 	list-style-type: none;
 }
-.tree ul{
+.tree ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-.tree ul li{
+.tree ul li {
 	position: relative;
 	list-style-type: none;
 	padding-left: calc(0.5em + 24px);
 }
-.tree ul li::before{
+.tree ul li::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -248,7 +261,7 @@ ol.count li::marker{
 	width: 20px;
 	border-top: 2px solid var(--text);
 }
-.tree ul li::after{
+.tree ul li::after {
 	content: "";
 	display: block;
 	position: absolute;
@@ -258,26 +271,26 @@ ol.count li::marker{
 	left: 0.5em;
 	border-left: 2px solid var(--text);
 }
-.tree ul li:last-child::after{
+.tree ul li:last-child::after {
 	top: -1em;
 	height: 2em;
 }
 
 /*TIP*/
-.tip{
+.tip {
 	color: var(--main);
 	text-decoration: underline;
 	cursor: pointer;
 }
-.tip.count{
+.tip.count {
 	counter-increment: tip;
 }
-.tip.count::after{
-	content: "[" counter(tip) "]";
+.tip.count::after {
+	content: "["counter(tip) "]";
 	font-size: 0.8em;
 	vertical-align: sup;
 }
-.tip+*{
+.tip+* {
 	padding: 1em;
 	display: inline-block;
 	position: fixed;
@@ -294,17 +307,18 @@ ol.count li::marker{
 	pointer-events: none;
 	z-index: 10;
 }
-@media(min-width: 768px){
-	.tip+*{
+@media(min-width: 768px) {
+	.tip+* {
 		width: 60vw;
 		left: calc(50% - 60vw / 2);
 	}
 }
-.tip:hover+*{
-	opacity:0.9;
+.tip:hover+* {
+	opacity: 0.9;
 }
+
 /*PAGETOP*/
-#page-top::before{
+#page-top::before {
 	content: "arrow_upward";
 	font-family: "Material Icons";
 	display: flex;
@@ -320,30 +334,29 @@ ol.count li::marker{
 	background-color: var(--gray);
 	border-radius: 50%;
 }
-#page-top:hover::before{
+#page-top:hover::before {
 	color: var(--back);
 	background-color: var(--main);
 }
 
-
 /*ASIDE*/
-aside{
+aside {
 	padding: 1.5rem;
 	border: 1px solid var(--text);
 	position: relative;
 	text-indent: none;
 }
-aside[class]::before{
+aside[class]::before {
 	background-color: var(--back);
 	display: inline-block;
 	line-height: 1;
 	position: absolute;
-  top: -0.5em;
-  left: 0.8em;
-  font-size: 1.1em;
+	top: -0.5em;
+	left: 0.8em;
+	font-size: 1.1em;
 	text-indent: none;
 }
-aside h6{
+aside h6 {
 	display: inline-block;
 	color: var(--back);
 	background-color: var(--text);
@@ -351,83 +364,82 @@ aside h6{
 	text-align: center;
 	padding: 0 0.2em;
 }
-.imp{
+.imp {
 	border: 2px solid var(--main);
 	background-image: radial-gradient(var(--gray) 2px, transparent 2px);
-  background-size: 2rem 2rem;
+	background-size: 2rem 2rem;
 }
-.imp::before{
+.imp::before {
 	content: "重要";
 	color: var(--main);
 }
-.eg::before{
+.eg::before {
 	content: "例";
 }
-.attn::before{
+.attn::before {
 	content: "注意";
 }
-.cf::before{
+.cf::before {
 	content: "参考";
 }
-.question::before{
+.question::before {
 	content: "問";
 }
-.answer::before{
+.answer::before {
 	content: "答";
 }
-.theory::before{
+.theory::before {
 	content: "学説";
 }
-.objection{
+.objection {
 	content: "反論";
 }
-.opinion{
+.opinion {
 	background: repeating-linear-gradient(-45deg, transparent, transparent 3px, var(--gray) 3px, var(--gray) 6px);
 }
-.opinion::before{
+.opinion::before {
 	content: "論点";
 }
 
-
 /*LAW*/
-.law::before{
+.law::before {
 	content: attr(data-law);
 }
-.law[data-art]::before{
+.law[data-art]::before {
 	content: attr(data-law) attr(data-art) "条";
 }
-.law[data-title]::before{
-	content: attr(data-law) attr(data-art) "条[" attr(data-title) "]";
+.law[data-title]::before {
+	content: attr(data-law) attr(data-art) "条["attr(data-title) "]";
 }
-.law{
+.law {
 	counter-reset: law 0;
 }
-.law section{
+.law section {
 	counter-increment: law;
 }
-.law section::before{
+.law section::before {
 	content: counter(law);
 }
-.law section:first-child::before{
+.law section:first-child::before {
 	content: none;
 }
-.law section[data-par]::before{
+.law section[data-par]::before {
 	content: attr(data-par);
 }
-.law section p{
-  text-indent: none;
+.law section p {
+	text-indent: none;
 }
-.law section ol{
+.law section ol {
 	list-style-type: cjk-ideographic;
 	list-style-position: inside;
 	padding-left: 1em;
 }
 
 /*PRIORITY*/
-*[data-priority]{
+*[data-priority] {
 	position: relative;
 }
-*[data-priority]::after{
+*[data-priority]::after {
 	content: attr(data-priority);
 	display: inline-block;
 	position: absolute;
@@ -444,44 +456,45 @@ aside h6{
 }
 
 /*DECORATION*/
-.default{
+.default {
 	text-align: start;
 	font-size: 1em;
 	font-weight: normal;
 	color: var(--text);
 	text-decoration: none;
 }
-.center{
+.center {
 	text-align: center;
 }
-.left{
+.left {
 	text-align: start;
 }
-.bold{
+.bold {
 	font-weight: bold;
 }
-.small{
+.small {
 	font-size: 0.8em;
 }
-.large{
+.large {
 	font-size: 1.2em;
 }
-strong:not([class]), .color{
+strong:not([class]),
+.color {
 	color: var(--main);
 }
-.sub-color{
+.sub-color {
 	color: var(--sub);
 }
-.highlight{
+.highlight {
 	background: linear-gradient(transparent 60%, var(--main) 60%);
 }
-.dot{
+.dot {
 	text-emphasis: filled dot;
 }
-.underline{
+.underline {
 	text-decoration: var(--main) wavy underline;
 }
-.outline{
+.outline {
 	display: inline-block;
 	line-height: 1;
 	padding: 0.2rem;
@@ -489,17 +502,16 @@ strong:not([class]), .color{
 	color: var(--back);
 	background-color: var(--main);
 }
-.border{
+.border {
 	margin: 0 0.2rem;
 	border: 2px solid var(--main);
 }
-.box{
+.box {
 	display: block;
 	border: 1px solid var(--text);
 	margin: var(--box);
 	padding: 0.5em;
 }
-.none{
+.none {
 	display: none;
 }
-
