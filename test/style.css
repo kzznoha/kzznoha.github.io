@@ -1,191 +1,159 @@
 /*TEST*/
-
 /*ROOT*/
-:root{
-	--main: rgba(70,177,190,1);
-	--sub: rgba(190,78,70,1);
-	--gray: rgba(197,190,196,0.1);
-
+:root {
+	--main: rgba(70, 177, 190, 1);
+	--sub: rgba(190, 78, 70, 1);
+	--gray: rgba(197, 190, 196, 0.1);
+	--back: rgba(10, 23, 26, 1);
+	--text: rgba(230, 251, 255, 1);
 	--box: 1em 0;
 	--icon-size: 2.4rem;
 	--icon-font: 2.4rem/2.4rem "Material Icons";
 }
-
-/*DARK MODE*/
-@media (prefers-color-scheme: dark) {
-	:root{
-		--back: rgba(10,23,26,1);
-		--text: rgba(230,251,255,1);
-	}
-}
-
-/*LIGHT MODE*/
-@media (prefers-color-scheme: light) {
-	:root{
-		--back: rgba(230,251,255,1);
-		--text: rgba(10,23,26,1);
-	}
-}
-
 /*DEFAULT*/
-body{
+body {
 	font: 1.4rem/2 "Noto Sans CJK JP", sans-serif;
 	background-color: var(--back);
 	color: var(--text);
 }
-*::selection{
+*::selection {
 	color: var(--back);
 	background-color: var(--main);
 }
-
 /*ICONS*/
-@font-face{
-  font-family: "Material Icons";
-  src: url(https://fonts.gstatic.com/s/materialicons/v113/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+@font-face {
+	font-family: "Material Icons";
+	src: url(https://fonts.gstatic.com/s/materialicons/v113/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
 }
-.icon{
+.icon {
 	font: var(--icon-font);
-  letter-spacing: normal;
-  text-transform: none;
-  white-space: nowrap;
-  word-wrap: normal;
+	letter-spacing: normal;
+	text-transform: none;
+	white-space: nowrap;
+	word-wrap: normal;
 	display: inline-block;
 	width: var(--icon-size);
 	height: var(--icon-size);
 }
-
 /*A*/
-a{
+a {
 	color: var(--main);
 }
-a:hover{
+a:hover {
 	color: var(--sub);
 }
-
 /*LIST*/
-*:where(ol, ul):not([class]){
+*:where(ol, ul):not([class]) {
 	list-style-type: none;
 	list-style-position: outside;
 	margin-left: 2em;
 }
-
 /*FORM, LABEL, INPUT, BUTTON, SELECT, DATALIST, OPTGROUP, OPTION, TEXTAREA, OUTPUT, PROGRESS, METER, FIELDSET, LEGEND*/
-*:where(input, button, select, textarea){
+*:where(input, button, select, textarea) {
 	background-color: var(--back);
 	border: 1px solid var(--text);
 	padding: 0 0.5rem;
 }
-*:where(input, button, select, textarea):hover{
+*:where(input, button, select, textarea):hover {
 	border-color: var(--main);
 }
-*:where(input, button, select, textarea):focus{
+*:where(input, button, select, textarea):focus {
 	border-color: var(--sub);
 }
-
 /*DETAILS*/
-summary{
+summary {
 	display: flex;
 	justify-content: space-between;
 	list-style: none;
 	border: 2px solid var(--text);
 	transition: 0.2s;
 	padding: 0 1em;
-align-items: center;
 }
-summary::after{
+summary::after {
 	content: "expand_more";
 	font: var(--icon-font);
 	width: var(--icon-size);
 	height: var(--icon-size);
+	align-self: center;
 	transition: 0.2s;
-vertical-align: middle;
 }
-details[open] summary::after{
+details[open] summary::after {
 	transform: rotate(180deg);
 	transition: 0.2s;
 }
-summary:hover{
+summary:hover {
 	border-color: var(--main);
 	color: var(--main);
 }
-details>div{
+details>div {
 	padding: 1em;
 	border: 1px solid var(--text);
 	border-top: none;
 }
 
-
 /*LAYOUT*/
-body{
+body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
-@media (min-width: 768px){
-	body{
+@media (min-width: 768px) {
+	body {
 		width: 90%;
 		margin: 0 auto;
 	}
 }
-#header, #main-content, #footer{
+#header, #main-content, #footer {
 	width: 100%;
 }
-#main-content{
+#main-content {
 	flex-grow: 1;
 }
-
 /*HEADER*/
-#header{
+#header {
 	padding: 2rem;
 	display: flex;
 	flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+	justify-content: space-between;
+	align-items: center;
 	text-align: center;
 	border-bottom: 2px solid var(--text);
 }
-#header-title{
+#header-title {
 	font-size: 2em;
 }
-#header-nav{
+#header-nav {
 	display: flex;
 }
-#header a{
+#header a {
 	color: var(--text);
 	text-decoration: none;
 }
-#header a:hover{
+#header a:hover {
 	color: var(--main);
 }
-
 /*MAIN*/
-#main-content{
-	padding: 2rem;
+#main-content {
+	padding: 1rem;
 }
-@media (min-width: 1020px){
-	#main-content{
+@media (min-width: 1020px) {
+	#main-content {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row-reverse;
 		justify-content: space-between;
 	}
-	#main-content #toc{
+	#main-content #toc {
 		padding-left: 0.5rem;
 		width: 30%;
 	}
-	#main-content #article{
+	#main-content #article {
 		padding-right: 0.5rem;
 		width: 70%;
 	}
 }
-
-/*ARTICLE*/
-#article section{
-	margin-left: 0.5em;
-}
-
 /*FOOTER*/
-#footer{
+#footer {
 	padding: 2rem 0;
 	text-align: center;
 }
