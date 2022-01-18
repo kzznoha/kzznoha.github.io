@@ -117,7 +117,7 @@ summary {
 	list-style: none;
 	border: 2px solid var(--text);
 	transition: 0.2s;
-	padding: 0 1em;
+	padding: 1em;
 }
 summary::after {
 	content: "expand_more";
@@ -167,6 +167,7 @@ body {
 #toc{
 	position: fixed;
 	top: 1rem;
+	left: calc(100vw - 95%);
 	background-color: var(--back);
 	width: 90%;
 	z-index: 10;
@@ -183,15 +184,17 @@ body {
 	display: block;
 	margin: 0.2rem 0;
 	padding: 0.1rem;
+	color: var(--text);
 	background-color: var(--gray);
 }
 #toc *:where(ul, ol) li a:hover{
+	color: var(--sub);
 	background-color: var(--back);
 }
 main{
 	width: 100%;
 	padding: 1rem;
-	margin-top: 3rem;
+	margin-top: 10rem;
 }
 main summary{
 	margin: 1rem 0;
