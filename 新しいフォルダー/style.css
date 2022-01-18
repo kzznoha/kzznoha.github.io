@@ -1,0 +1,220 @@
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+	all: unset;
+	display: revert;
+}
+*, *::after, *::before {
+	box-sizing: border-box;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	height: 100%;
+	min-height: 100vh;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	text-align: justify;
+	font-synthesis: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hr, blockquote, img {
+	display: block;
+}
+iframe, canvas, svg, video, img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+rt, sup, sub {
+	font-size: 0.7em;
+}
+table {
+	border-collapse: collapse;
+}
+textarea {
+	white-space: pre-wrap;
+}
+/*TEST*/
+/*ROOT*/
+:root {
+	--main: rgba(70, 177, 190, 1);
+	--sub: rgba(190, 78, 70, 1);
+	--gray: rgba(197, 190, 196, 0.1);
+	--back: rgba(0, 13, 16, 1);
+	--text: rgba(230, 251, 255, 1);
+}
+/*DEFAULT*/
+body {
+	font: 1.4rem/2 "Noto Sans CJK JP", sans-serif;
+	background-color: var(--back);
+	color: var(--text);
+}
+*::selection {
+	color: var(--back);
+	background-color: var(--main);
+}
+/*ICONS*/
+@font-face {
+	font-family: "Material Icons";
+	src: url(icon.woff2) format('woff2');
+}
+.icon, summary::after {
+	font: 2.4rem/2.4rem "Material Icons";
+	letter-spacing: normal;
+	text-transform: none;
+	white-space: nowrap;
+	word-wrap: normal;
+	display: inline-block;
+	width: 2.4rem;
+	height: 2.4rem;
+}
+/*A*/
+a {
+	color: var(--main);
+}
+a:hover {
+	color: var(--sub);
+}
+/*DL*/
+dl {
+	padding: 0.5em;
+	background-color: var(--gray);
+}
+dt {
+	font-style: normal;
+	color: var(--main);
+	font-size: 1.2em;
+}
+dt::before {
+	content: "【";
+	color: var(--text);
+}
+dt::after {
+	content: "】";
+	color: var(--text);
+}
+dd {
+	padding: 0 1em;
+}
+
+/*LIST*/
+ol, ul {
+	list-style-position: outside;
+	margin-left: 2em;
+}
+ol {
+	list-style-type: decimal;
+}
+ul {
+	list-style-type: square;
+}
+/*DETAILS*/
+summary {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	border: 2px solid var(--text);
+	transition: 0.2s;
+	padding: 0 1em;
+}
+summary::after {
+	content: "expand_more";
+	align-self: center;
+	transition: 0.2s;
+}
+details[open]>summary::after {
+	transform: rotate(180deg);
+	transition: 0.2s;
+}
+summary:hover {
+	border-color: var(--main);
+	color: var(--main);
+}
+details>div {
+	padding: 1em;
+	border: 1px solid var(--text);
+	border-top: none;
+}
+details details summary{
+	font-size: 1em;
+	border: solid 1px var(--text);
+}
+
+/*P*/
+p{
+	text-indent: 1em;
+}
+
+/*LAYOUT*/
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+@media (min-width: 768px) {
+	body {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+*:where(body>*){
+	width: 100%;
+}
+
+/*DESINE*/
+#toc{
+	position: fixed;
+	top: 1rem;
+	background-color: var(--back);
+	width: 90%;
+	z-index: 10;
+}
+#toc summary:hover{
+	color: var(--sub);
+	border-color: var(--sub);
+}
+#toc *:where(ul, ol){
+	margin: 0;
+	list-style: none;
+}
+#toc *:where(ul, ol) li a{
+	display: block;
+	margin: 0.2rem 0;
+	padding: 0.1rem;
+	background-color: var(--gray);
+}
+#toc *:where(ul, ol) li a:hover{
+	background-color: var(--back);
+}
+main{
+	width: 100%;
+	padding: 1rem;
+	margin-top: 3rem;
+}
+main summary{
+	margin: 1rem 0;
+	padding: 0 1rem;
+	font-size: 1.5em;
+	border: solid 3px var(--main);
+	background: repeating-linear-gradient(-45deg, transparent, transparent 3px, var(--gray) 3px, var(--gray) 6px);
+}
+main aside{
+	margin: 1rem;
+	padding: 1.5rem;
+	border: 1px solid var(--text);
+	position: relative;
+	text-indent: none;
+}
+main aside::before{
+	content: attr(data-title);
+	background-color: var(--back);
+	display: inline-block;
+	line-height: 1;
+	position: absolute;
+	top: -0.5em;
+	left: 0.8em;
+	font-size: 1.1em;
+	text-indent: none;
+}
