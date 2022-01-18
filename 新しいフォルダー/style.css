@@ -47,7 +47,7 @@ textarea {
 }
 /*DEFAULT*/
 body {
-	font: 1.6rem/2 "Noto Sans CJK JP", sans-serif;
+	font: 1.8rem/2 "Noto Sans CJK JP", sans-serif;
 	background-color: var(--back);
 	color: var(--text);
 }
