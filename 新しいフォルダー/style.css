@@ -121,6 +121,7 @@ summary {
 }
 summary::after {
 	content: "expand_more";
+	transform-origin: center;
 	align-self: center;
 	transition: 0.2s;
 }
