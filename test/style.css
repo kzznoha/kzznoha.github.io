@@ -244,3 +244,7 @@ main aside::before{
 	color: var(--back);
 	background-color: var(--sub);
 }
+
+strong, .strong{
+	color: var(--main);
+}
