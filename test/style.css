@@ -255,3 +255,6 @@ strong, .strong{
 .center{
 	text-align: center;
 }
+.small{
+	font-size: 1.4rem;
+}
