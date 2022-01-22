@@ -102,6 +102,7 @@ ul {
 
 /*TABLE*/
 table {
+	width: 100%;
 	border-collapse: collapse;
 	table-layout: fixed;
 }
@@ -109,10 +110,6 @@ table {
 	padding: 0.5em 1em;
 	vertical-align: middle;
 	border: 1px solid var(--text);
-}
-*:where(th, td):nth-child(2n) {
-	background-color: var(--gray);
-	width: 10%;
 }
 
 /*DETAILS*/
@@ -245,6 +242,16 @@ main aside::before{
 	background-color: var(--sub);
 }
 
+/**/
 strong, .strong{
 	color: var(--main);
+}
+.main{
+	background: repeating-linear-gradient(-45deg, transparent, transparent 1px, var(--main) 1px, var(--main) 2px);
+}
+.sub{
+	background: repeating-linear-gradient(-45deg, transparent, transparent 1px, var(--sub) 1px, var(--sub) 2px);
+}
+.center{
+	text-align: center;
 }
