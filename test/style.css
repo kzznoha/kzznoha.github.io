@@ -12,30 +12,20 @@ html {
 	font-size: 62.5%;
 }
 body {
-	height: 100%;
 	min-height: 100vh;
 	word-break: break-word;
 	overflow-wrap: break-word;
 	text-align: justify;
 	font-synthesis: none;
+
+	font: 1.8rem/2 "Noto Sans CJK JP", sans-serif;
+	background-color: var(--back);
+	color: var(--text);
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hr, blockquote, img {
 	display: block;
 }
-iframe, canvas, svg, video, img {
-	max-width: 100%;
-	height: auto;
-	vertical-align: bottom;
-}
-rt, sup, sub {
-	font-size: 0.7em;
-}
-table {
-	border-collapse: collapse;
-}
-textarea {
-	white-space: pre-wrap;
-}
+
 /*TEST*/
 /*ROOT*/
 :root {
@@ -45,22 +35,19 @@ textarea {
 	--back: rgba(0, 13, 16, 1);
 	--text: rgba(230, 251, 255, 1);
 }
+
 /*DEFAULT*/
-body {
-	font: 1.8rem/2 "Noto Sans CJK JP", sans-serif;
-	background-color: var(--back);
-	color: var(--text);
-}
 *::selection {
 	color: var(--back);
 	background-color: var(--main);
 }
+
 /*ICONS*/
 @font-face {
 	font-family: "Material Icons";
 	src: url(icon.woff2) format('woff2');
 }
-.icon, summary::after {
+.icon, summary::after, #page-top {
 	font: 2.4rem/2.4rem "Material Icons";
 	letter-spacing: normal;
 	text-transform: none;
@@ -70,6 +57,7 @@ body {
 	width: 2.4rem;
 	height: 2.4rem;
 }
+
 /*A*/
 a {
 	color: var(--main);
@@ -77,6 +65,7 @@ a {
 a:hover {
 	color: var(--sub);
 }
+
 /*DL*/
 dl {
 	padding: 0.5em;
@@ -110,6 +99,22 @@ ol {
 ul {
 	list-style-type: square;
 }
+
+/*TABLE*/
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+*:where(th, td) {
+	padding: 0.5em 1em;
+	vertical-align: middle;
+	border: 1px solid var(--text);
+}
+*:where(th, td):nth-child(2n) {
+	background-color: var(--gray);
+	width: 10%;
+}
+
 /*DETAILS*/
 summary {
 	display: flex;
@@ -121,8 +126,8 @@ summary {
 }
 summary::after {
 	content: "expand_more";
-	transform-origin: center;
 	align-self: center;
+	transform-origin: center;
 	transition: 0.2s;
 }
 details[open]>summary::after {
@@ -148,29 +153,13 @@ p{
 	text-indent: 1em;
 }
 
-/*LAYOUT*/
-body {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-}
-@media (min-width: 768px) {
-	body {
-		width: 90%;
-		margin: 0 auto;
-	}
-}
-*:where(body>*){
-	width: 100%;
-}
-
 /*DESINE*/
 #toc{
 	position: fixed;
+	width: 90vw;
 	top: 1rem;
-	left: calc(100vw - 95%);
+	left: calc(50% - 90vw/2);
 	background-color: var(--back);
-	width: 90%;
 	z-index: 10;
 }
 #toc summary:hover{
@@ -192,10 +181,20 @@ body {
 	color: var(--sub);
 	background-color: var(--back);
 }
+#toc *:where(ul, ol) *:where(ul, ol){
+	padding-left: 1em;
+}
+
 main{
 	width: 100%;
 	padding: 1rem;
-	margin-top: 10rem;
+	margin: 10rem 0 30rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+main details{
+	width: 100%;
 }
 main summary{
 	margin: 1rem 0;
@@ -221,4 +220,27 @@ main aside::before{
 	left: 0.8em;
 	font-size: 1.1em;
 	text-indent: none;
+}
+
+/*PAGETOP*/
+
+#page-top::before {
+	content: "arrow_upward";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	width: 5rem;
+	height: 5rem;
+	font-size: 3rem;
+	color: var(--sub);
+	background-color: var(--gray);
+	border-radius: 50%;
+	border: 2px solid var(--sub);
+}
+#page-top:hover::before {
+	color: var(--back);
+	background-color: var(--sub);
 }
