@@ -38,12 +38,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	--text: rgba(230, 251, 255, 1);
 }
 
-/*DEFAULT*/
-*::selection {
-	color: var(--back);
-	background-color: var(--main);
-}
-
 /*ICONS*/
 @font-face {
 	font-family: "Material Icons";
@@ -69,10 +63,6 @@ a:hover {
 }
 
 /*DL*/
-dl {
-	padding: 0.5em;
-	background-color: var(--gray);
-}
 dt {
 	font-style: normal;
 	color: var(--main);
@@ -106,12 +96,15 @@ ul {
 table {
 	width: 100%;
 	border-collapse: collapse;
-	table-layout: fixed;
+
 }
 *:where(th, td) {
 	padding: 0.5em;
 	vertical-align: middle;
 	border: 1px solid var(--text);
+}
+.fix{
+	table-layout: fixed;
 }
 .row td{
 	width: 100%;
@@ -207,7 +200,7 @@ main summary{
 	background: repeating-linear-gradient(-45deg, transparent, transparent 3px, var(--gray) 3px, var(--gray) 6px);
 }
 main aside{
-	margin: 1rem;
+	margin: 1em 1rem;
 	padding: 1.5rem;
 	border: 1px solid var(--text);
 	position: relative;
@@ -262,5 +255,43 @@ strong, .strong{
 	text-align: center;
 }
 .small{
-	font-size: 1.4rem;
+	font-size: 0.8em;
+}
+
+/*TREE*/
+.tree {
+	list-style-type: none;
+}
+.tree ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.tree ul li {
+	position: relative;
+	list-style-type: none;
+	padding-left: calc(0.5em + 24px);
+}
+.tree ul li::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 1em;
+	left: 0.5em;
+	width: 20px;
+	border-top: 2px solid var(--text);
+}
+.tree ul li::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0.5em;
+	border-left: 2px solid var(--text);
+}
+.tree ul li:last-child::after {
+	top: -1em;
+	height: 2em;
 }
