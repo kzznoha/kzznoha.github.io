@@ -30,7 +30,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*ROOT*/
 :root {
 	--main: rgba(70, 177, 190, 1);
+	--main-5: rgba(70, 177, 190, 0.5);
 	--sub: rgba(190, 78, 70, 1);
+	--sub-5: rgba(190, 78, 70, 0.5);
 	--gray: rgba(197, 190, 196, 0.1);
 	--back: rgba(0, 13, 16, 1);
 	--text: rgba(230, 251, 255, 1);
@@ -107,9 +109,13 @@ table {
 	table-layout: fixed;
 }
 *:where(th, td) {
-	padding: 0.5em 1em;
+	padding: 0.5em;
 	vertical-align: middle;
 	border: 1px solid var(--text);
+}
+.row td{
+	width: 100%;
+	display: block;
 }
 
 /*DETAILS*/
@@ -247,10 +253,10 @@ strong, .strong{
 	color: var(--main);
 }
 .main{
-	background: repeating-linear-gradient(-45deg, transparent, transparent 1px, var(--main) 1px, var(--main) 2px);
+	background: repeating-linear-gradient(-45deg, transparent, transparent 1px, var(--main-5) 1px, var(--main-5) 2px);
 }
 .sub{
-	background: repeating-linear-gradient(-45deg, transparent, transparent 1px, var(--sub) 1px, var(--sub) 2px);
+	background: repeating-linear-gradient(-45deg, transparent, transparent 1px, var(--sub-5) 1px, var(--sub-5) 2px);
 }
 .center{
 	text-align: center;
