@@ -17,7 +17,6 @@
 				<li><a href="#hl3">株主総会</a></li>
 				<li><a href="#hl4">取締役</a></li>
 				<li><a href="#case">判例</a></li>
-				<li><a href="#table">表</a></li>
 				<li><a href="#test">小テスト解答</a></li>
 			</ul>
 		</div>
@@ -25,6 +24,38 @@
 	<main>
 		<details id="hl1">
 			<summary>総論</summary>
+			<table class="center fix small">
+				<caption>会社の種類</caption>
+				<tr>
+					<th></th>
+					<th>種類</th>
+					<th>地位</th>
+					<th>割合</th>
+					<th>責任</th>
+				</tr>
+				<tr>
+					<td>株式会社</td>
+					<th>株式会社</th>
+					<td>株式</td>
+					<td>均等</td>
+					<td>間接有限</td>
+				</tr>
+				<tr>
+					<td rowspan="3">持分会社</td>
+					<th>合名会社</td>
+					<td rowspan="3">持分</td>
+					<td rowspan="3">出資額</td>
+					<td>直接無限</td>
+				</tr>
+				<tr>
+					<th>合資会社</th>
+					<td>直接無限<br />＋<br />直接有限</td>
+				</tr>
+				<tr>
+					<th>合同会社</td>
+					<td>有限<br />(形式: 直接<br />実質: 間接)</td>
+				</tr>
+			</table>
 			<div>
 				<dl>
 					<dt>会社</dt>
@@ -41,20 +72,22 @@
 					<dt>法人格否認の法理</dt>
 					<dd>法人制度の目的に照らし、法人の<strong>形式的独立性</strong>を貫くことが<strong>正義・衡平</strong>に反する場合に、特定の法律関係については会社と社員を同一視する。</dd>
 					<dd>根拠規定は権利濫用の禁止(民法1条3項)。</dd>
-					<dd>要件:
-						<ul>
-							<li><strong>法人格の濫用</strong>
-								<ul>
-									<li>支配の要件: 会社の背後にいる者が会社を意のままに支配している</li>
-									<li>目的の要件: 支配者が法人格を違法・不当な目的のために利用している</li>
-								</ul>
-							</li>
-							<li><strong>法人格の形骸化</strong>
-								<ul>
-									<li>支配の要件: 濫用事例より厳しい基準(完全性)</li>
-								</ul>
-							</li>
-						</ul>
+					<dd>
+						<aside data-title="要件">
+							<ul>
+								<li><strong>法人格の濫用</strong>
+									<ul>
+										<li>支配の要件: 会社の背後にいる者が会社を意のままに支配している</li>
+										<li>目的の要件: 支配者が法人格を違法・不当な目的のために利用している</li>
+									</ul>
+								</li>
+								<li><strong>法人格の形骸化</strong>
+									<ul>
+										<li>支配の要件: 濫用事例より厳しい基準(完全性)</li>
+									</ul>
+								</li>
+							</ul>
+						</aside>
 					</dd>
 				</dl>
 			</div>
@@ -76,17 +109,193 @@
 							<dt>資本多数決</dt>
 							<dd>一株一議決権(308条1項)</dd>
 						</dl>
-					</div>
 				</details>
 				<details id="hl2.3">
 					<summary>株式会社の機関</summary>
+					<table class="center fix small">
+						<tr>
+							<th rowspan="2"></th>
+							<th colspan="2">非公開会社</th>
+							<th colspan="2">公開会社</th>
+							<th rowspan="2">指名委員会等設置会社</th>
+							<th rowspan="2">監査等委員会設置会社</th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>大会社</th>
+							<th></th>
+							<th>大会社</th>
+						</tr>
+						<tr>
+							<th>株主総会</th>
+							<td colspan="6" class="main">必須</td>
+						</tr>
+						<tr>
+							<th>取締役</th>
+							<td colspan="6" class="main">必須</td>
+						</tr>
+						<tr>
+							<th>取締役会</th>
+							<td colspan="2">任意</td>
+							<td colspan="2" class="main">必須</td>
+							<td class="main">必須</td>
+							<td class="main">必須</td>
+						</tr>
+						<tr>
+							<th rowspan="2">監査役</th>
+							<td>任意</td>
+							<td rowspan="2" class="main">必須</td>
+							<td rowspan="2" colspan="2" class="main">必須</td>
+							<td rowspan="2" class="sub">不可</td>
+							<td rowspan="2" class="sub">不可</td>
+						</tr>
+						<tr>
+							<td class="main small">取締役会設置会社</td>
+						</tr>
+						<tr>
+							<th>監査役会</th>
+							<td colspan="2">任意</td>
+							<td>任意</td>
+							<td class="main">必須</td>
+							<td class="sub">不可</td>
+							<td class="sub">不可</td>
+						</tr>
+						<tr>
+							<th>会計監査</th>
+							<td>任意</td>
+							<td class="main">必須</td>
+							<td>任意</td>
+							<td class="main">必須</td>
+							<td class="main">必須</td>
+							<td class="main">必須</td>
+						</tr>
+						<tr>
+							<th>三委員会</th>
+							<td colspan="4" class="sub">-</td>
+							<td class="main">必須</td>
+							<td class="sub">不可</td>
+						</tr>
+						<tr>
+							<th>監査等委員会</th>
+							<td colspan="4" class="sub">-</td>
+							<td class="sub">不可</td>
+							<td class="main">必須</td>
+						</tr>
+						<tr>
+							<th>会計参与</th>
+							<td colspan="6">任意<span class="small">*取締役会設置会社:監査役の代替として可</span></td>
+						</tr>
+					</table>
 					<div>
 						<dl>
 							<dt>会計参与</dt>
 							<dd>任意に設置できる。計算書類を作成(374条)</dd>
 							<dd>資格:公認会計士、監査法人、税理士、税理士法人(333条1項)</dd>
 						</dl>
-
+						<details id="hl2.3.1" open>
+							<summary>公開会社の機関</summary>
+							<table class="center small">
+								<tr>
+									<th>機関</th>
+									<th>員数</th>
+									<th>任期</th>
+									<th>短縮</th>
+									<th>伸長</th>
+									<th>独任性</th>
+								<tr>
+									<th>取締役</th>
+									<td>3人以上<br />(331⑤)</td>
+									<td>2年<br />(332①)</td>
+									<td class="main">○</td>
+									<td class="sub">×</td>
+									<td class="sub">×<br />(362①②)</td>
+								</tr>
+								<tr>
+									<th>監査役</th>
+									<td></td>
+									<td>4年<br />(336①)</td>
+									<td class="sub">×</td>
+									<td class="sub">×</td>
+									<td class="main">○<br />(390②)</td>
+								</tr>
+								<tr>
+									<th>監査役会</th>
+									<td>3人以上<br />(335③)</td>
+									<td>※大会社</td>
+									<td colspan="3"><strong>半数以上</strong>社外監査役<br />(335③)</td>
+								</tr>
+							</table>
+						</details>
+						<details id="hl2.3.2" open>
+							<summary>非公開会社の機関</summary>
+							<table class="center small">
+								<caption>取締役会を設置しない場合</caption>
+								<tr>
+									<th>機関</th>
+									<th>員数</th>
+									<th>任期</th>
+									<td>役割</td>
+								</tr>
+								<tr>
+									<th>取締役</th>
+									<td>1人以上<br />(326①)</td>
+									<td>10年まで伸長可<br />(331②)</td>
+									<td>業務執行・代表</td>
+								</tr>
+								<tr>
+									<th>監査役</th>
+									<td colspan="3" class="small">会計監査人設置会社では必須(327③)</td>
+								</tr>
+								</table>
+								<table class="center small">
+									<caption>取締役会を設置する場合</caption>
+									<tr>
+										<th>機関</th>
+										<th>員数</th>
+										<th>任期</th>
+										<td>役割</td>
+									</tr>
+									<tr>
+										<th>監査役</th>
+										<td class="main">会計参与<br />で代替可<br />(327②)</td>
+										<td>10年まで伸長可<br />(331②)</td>
+										<td>会計監査に限定可<br />(389)</td>
+									</tr>
+								</table>
+						</details>
+						<details id="hl2.3.3">
+							<summary>指名委員会等設置会社の機関</summary>
+							<div>
+								<dl>
+									<dt>指名委員会</dt>
+									<dd>株主総会に提出する取締役の選任・解任議案の決定(404①)</dd>
+									<dt>監査委員会</dt>
+									<dd>取締役・執行役の職務執行の監査等(404②)</dd>
+									<dt>報酬委員会</dt>
+									<dd>取締役・執行役の報酬の決定(404③)</dd>
+									<dd>
+										<aside>各委員会は、取締役会で選定した<strong>3人以上</strong>の取締役によって組織され、その過半数は<strong>社外取締役</strong>でなければならない(400①-③)</aside>
+									</dd>
+									<dt>取締役</dt>
+									<dd>任期は1年。(剰余金配当権限のため)</dd>
+									<dt>執行役</dt>
+									<dd>取締役会から委任を受けた事項の決定・業務の執行</dd>
+									<dt>代表執行役</dt>
+									<dd>会社の代表(420①)、任期1年(402⑦)</dd>
+								</dl>
+							</div>
+						</details>
+						<details id="hl2.3.4">
+							<summary>監査等委員会の機関</summary>
+							<div>
+								<dl>
+									<dt>監査等委員会</dt>
+									<dd>監査等委員以外の取締役の選任・解任・辞任および報酬に関する株主総会での意見陳述権(342の2④,361⑥,399の2③,399の5)</dd>
+									<dt>監査等委員</dt>
+									<dd>株主総会決議で選任</dd>
+								</dl>
+							</div>
+						</details>
 					</div>
 				</details>
 				<details id="hl2.4">
@@ -105,31 +314,89 @@
 									<li>会社債権者が多数の株主に直接責任を追求する必要がない</li>
 								</ul>
 							</dd>
+							<dt>株式譲渡自由の原則</dt>
+							<dd>多数の出資を集めるには、投下資本の回収を保障することが必要。強行法的に保障(127)</dd>
+							<dd>会社存続中の投下資本回収方法:
+								<ul>
+								<li>退社して(社員たる地位の絶対的消滅)<strong>持分の払戻し</strong>を受けることによって会社から直接投下資本を回収する方法</li>
+								<li>持分を他人に譲渡して(社員たる地位の相対的消滅)その対価を得ることによって間接的に投下資本を回収する方法(→株式譲渡)</li>
+								</ul>
+							</dd>
+							<dd>株主に対する会社財産の払戻は原則として<strong>剰余金分配規制の下でしか認められない</strong>。一方、株主の<strong>個性</strong>は重視されないため、株主の交代を認めても差し支えない。</dd>
 						</dl>
 					</div>
 				</details>
 				<details id="hl2.5">
-					<summary>会社財産の確保</summary>
-					<div></div>
+					<summary>株式会社の財産</summary>
+					<div>
+						<dl>
+							<dt>最低資本金制度</dt>
+							<dd>廃止。純資産額300万円を基準とした剰余金分配制限(458)によって代替。</dd>
+							<dt>資本金額</dt>
+							<dd>設立・新株発行に際して株主が実際に出資した財産の総額(445①)</dd>
+							<dd>現実に出資された財産の額によって事後的に確定し、株式の発行価額とは無関係に算定される</dd>
+							<dt>資本準備金</dt>
+							<dd>資本金額の1/2以内は資本金として計上しなくてもよいが(445②)、資本準備金として計上しなければならない(445③)</dd>
+						</dl>
+						<aside data-title="財産情報開示">
+							<p>目的: 会社財産のみを担保財産とする多数の会社債権者の保護</p>
+							<p>→自らの財産の保全のため適切な開示を要求: 新会社法のもとではより強く要請</p>
+							<p>貸借対照表・<strong>損益計算表</strong>(計算書類)など株式会社の財産及び損益の状況を示す計算書類の作成が義務づけられ(会435条)、会計参与・監査役・<strong>会計監査人</strong>を通してその正確性が担保される。会社債権者は計算書類を閲覧できる(会442条3項)。さらに、貸借対照表(大会社では貸借対照表と<strong>損益計算書</strong>)またはその要旨の公告(いわゆる<strong>決算公告</strong>)が義務づけられる(会440条)。</p>
+						</aside>
+						<aside data-title="資金調達">
+							<ul>
+								<li>新株発行</li>
+								<li>社債発行(676-)</li>
+							</ul>
+							<dl>
+								<dt>授権資本制度</dt>
+								<dd>定款所定の発行可能株式数(37)から発行済株式総数を差し引いた株式数(授権資本枠)については、原則取締役会決議をもって随時発行できる(201①)</dd>
+								<dt>社債発行</dt>
+								<dd>
+									<ul>
+										<li>会社が社債を募集するには、原則として<strong>社債管理者</strong>の設置が強制される(会702条)。</li>
+										<li>
+										同一種類の社債権者は継続的に共通の利害関係を有することに鑑み、社債権者にとって重大な利害関係を有する事項につき決議することのできる臨時の会議体として、<strong>社債権者集会</strong>の制度が設けられている(会716条)。
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</aside>
+					</div>
 				</details>
 				<details id="hl2.6">
-					<summary>財産情報開示</summary>
+					<summary>株式会社の設立</summary>
 					<div>
-						<ul>
-							<li>貸借対照表:</li>
-							<li>損益計算書:</li>
-						</ul>
+						<dl>
+							<dt>準則主義</dt>
+							<dd>法律によって法人格取得の要件を予め定めておき、その要件をみたしたときは当然に法人格の取得を認める。</dd>
+						</dl>
+						<aside data-title="社団としての実態形成">
+							<ul>
+								<li>定款作成</li>
+								<li>社員確定</li>
+								<li>機関設置</li>
+								<li>設立登記→法人格取得</li>
+							</ul>
+							<aside data-title="発起人制度">
+								<ul>
+									<li>発起人による定款作成(26①)</li>
+									<li>株式引受(32,57-62)</li>
+									<li>取締役等の役員の選任(38,88)</li>
+									<li>出資全部の確実な履行(34,63)</li>
+								</ul>
+							</aside>
+						<aside data-title="第三者の関与">
+							<ul>
+								<li>公証人による定款の認証(30①)</li>
+								<li>一定事項に関する裁判所選任の検査役による調査(33)</li>
+								<li>払込取扱金融機関に対する株式払込み(33)と払込金保管証明(64)</li>
+							</ul>
+						</aside>
+						</aside>
 					</div>
 				</details>
 				<details id="hl2.7">
-					<summary>株式会社の設立</summary>
-					<div></div>
-				</details>
-				<details id="hl2.8">
-					<summary>株式会社の資金調達</summary>
-					<div></div>
-				</details>
-				<details id="hl2.9">
 					<summary>会社法上の訴え</summary>
 					<div>
 						<ul>
@@ -147,35 +414,142 @@
 				<details id="hl3.2">
 					<summary>株主総会の権限</summary>
 					<div>
-						<table>
-							<tr>
-								<th>決議事項</th>
-							</tr>
-						</table>
+						<dl>
+							<dt>株主総会</dt>
+							<dd>取締役会設置会社では会社法および定款に定められた事項を決議事項とする(295②)</dd>
+							<dd>取締役会非設置会社では万能の機関(295①)</dd>
+							<dd>定款をもってしても取締役会等に委譲出来ない事項(295③)もあり。</dd>
+							<dd>取締役会設置会社においても、定款によりいかなる事項も決議事項とできる(通説)</dd>
+						</dl>
 					</div>
 				</details>
 				<details id="hl3.3">
 					<summary>株主総会の招集</summary>
 					<div>
 						<ul>
-							<li>定時株主総会(296条1項)</li>
-							<li>臨時株主総会(296条2項)</li>
+							<li>定時株主総会(296①)</li>
+							<li>臨時株主総会(296②)</li>
 						</ul>
-						<p>原則:取締役会が招集決定(298条1・4項)、代表取締役が通知</p>
-						<p>取締役会費設置:取締役が過半数をもって招集決定・通知(348条2項・296条3項)</p>
+						<p>判例では招集手続を省略した場合の全員出席総会の決議は有効</p>
+						<p>一人株主は判例では招集手続不要</p>
+						<p>株主数の少ない会社の運営弾力化を目的とした規定(300,319)</p>
 					</div>
 				</details>
 				<details id="hl3.4">
 					<summary>株主総会の議決権</summary>
-					<div></div>
+					<div>
+						<dl>
+							<dt>一株一議決権</dt>
+							<dd>
+								<aside data-title="例外">
+									<ul>
+										<li>議決権制限株式(108①iii)</li>
+										<li>単元未満株式(189①)</li>
+										<li>自己株式(308②)</li>
+										<li>相互保有株式(308①)</li>
+										<li>基準日以降発行株式(*124④)</li>
+										<li>…</li>
+									</ul>
+								</aside>
+							</dd>
+							<dd>(308①)</dd>
+						</dl>
+						<aside data-title="代理人による議決権行使">
+							<p>許容性・必要性あり</p>
+							<p>判例では、代理人資格を株主に限定する定款は制限的有効(特段の事情があれば適用否定)とする。</p>
+						</aside>
+						<asiede data-title="書面・電子投票">
+							<p>議決権行使可能な株主数が<strong>1000人</strong>以上の場合は書面投票制度保障(298②)</p>
+						</asiede>
+					</div>
 				</details>
 				<details id="hl3.5">
 					<summary>株主総会の決議</summary>
-					<div></div>
+					<div>
+						<ul>
+							<li>普通決議(309①)【役員選任決議:下限1/3以上(341)】</li>
+							<li>特別決議(309②)【下限1/3以上で2/3以上の賛成】</li>
+							<li>特殊の決議
+								<ul>
+									<li>株式譲渡制限の新設(309③)→非公開会社化</li>
+									<li>株主ごとに異なる取扱い(109②,309④)</li>
+									<li>総株主の同意が必要な事項(55,424,110,776①)</li>
+								</ul>
+							</li>
+						</ul>
+						<aside data-title="資本多数決の修正">
+							<details>
+								<summary>反対株主の株式買取請求権</summary>
+								<div>
+									<p>行使要件:総会に先立って反対の意思を会社に通知し、総会でも反対</p>
+									<p>行使(会469条5項)により当然に株式の売買関係が成立</p>
+								</div>
+							</details>
+							<details>
+								<summary>役員解任請求権</summary>
+								<div>
+									<p>役員の職務執行に関して<strong>不正の行為</strong>または法令・定款に違反する<strong>重大な事実</strong>があるにもかかわらず株主総会で解任決議が否決されたときは、<strong>6ヶ月</strong>前から引き続き(公開会社のみ)総株主の議決権または発行済株式総数の<strong>3</strong>％以上を有する株主は、<strong>30</strong>日以内に訴えをもってその役員の解任を請求することができる(854①)。</p>
+								</div>
+							</details>
+						</aside>
+					</div>
 				</details>
 				<details id="hl3.6">
 					<summary>決議の瑕疵</summary>
-					<div></div>
+					<div>
+						<ul>
+							<li>決議取消の訴え(831)</li>
+							<li>決議無効確認の訴え(830②)</li>
+							<il>決議不存在確認の訴え(830①)</il>
+						</ul>
+						<details>
+							<summary>決議の取消</summary>
+							<div>
+								<aside data-title="取消原因">
+									<ul>
+										<li>招集手続・決議方法の法令・定款違反または著しい不公正(831①i)</li>
+										<li>決議内容の定款違反(831①ii)</li>
+										<li>特別利害関係人の議決権行使(831①iii)</li>
+									</ul>
+								</aside>
+								<aside data-title="主張">
+									<p>主張権者:株主・取締役・執行役・監査役・清算人</p>
+									<p>主張期間:決議の日から3ヶ月以内(判例:提訴期間内に訴え提起でも取消し原因追加は不可)</p>
+								</aside>
+								<aside data-title="裁量棄却">
+									<p>要件(831②)</p>
+									<ul>
+										<li>取消し原因が重大でない違反事実である</li>
+										<li>違反事実が決議に影響を及ぼさない</li>
+									</ul>
+								</aside>
+							</div>
+						</details>
+						<details>
+							<summary>決議の無効</summary>
+							<div>
+								<p>主張制限なし</p>
+								<p>無効原因:決議内容の法令違反</p>
+							</div>
+						</details>
+						<details>
+							<summary>決議の不存在</summary>
+							<div>
+								<p>主張制限なし</p>
+								<aside data-title="不存在原因">
+									<ul>
+										<li>総会決議の事実がないのに議事録だけ作成されている場合</li>
+										<li>取締役会決議を経ずに代表権のない取締役が招集した場合(判例)</li>
+										<li>取締役選任を目的とする株主総会決議が不存在であり、その取締役によって構成される取締役会の招集決定に基づき、その取締役会で選任された代表取締役が株主総会を招集した場合(判例)</li>
+										<li>取締役会で決定された日時・場所以外で総会が開催された場合</li>
+										<li>取締役会で決定された議題以外の議題につき決議がなされた場合(309⑤)</li>
+										<li>総会の決議事項に属さない議題につき決議がなされた場合</li>
+										<li>招集通知漏れが著しい場合</li>
+									</ul>
+								</aside>
+							</div>
+						</details>
+					</div>
 				</details>
 			</div>
 		</details>
@@ -185,44 +559,117 @@
 				<details id="hl4.1">
 					<summary>取締役の地位</summary>
 					<div>
-						<details id="hl4.1.1">
-							<summary>取締役の資格等</summary>
-							<div></div>
-						</details>
-						<details id="hl4.1.2">
-							<summary>取締役の選任</summary>
-							<div></div>
-						</details>
-						<details id="hl4.1.3">
-							<summary>取締役の退任</summary>
-							<div></div>
-						</details>
+						<p>非公開会社につき取締役は独任機関(348①,349①②)。なお、業務執行は原則として過半数をもって決定(348②)。</p>
+						<p>取締役の氏名は登記事項(911③xiii)。</p>
+						<p>取締役と会社は委任関係(330)。</p>
+						<table>
+							<tr>
+								<th>資格</th>
+								<td colspan="2">自然人(331①i)(法人ほか欠格事由)</td>
+							</tr>
+							<tr>
+								<th rowspan="2">員数</th>
+								<td>取締役設置会社</td>
+								<td>3人以上(331④)</td>
+							</tr>
+							<tr>
+								<td>取締役非設置会社</td>
+								<td>1人以上(326①)</td>
+							</tr>
+							<tr>
+								<th rowspan="3">任期</th>
+								<th>公開会社</th>
+								<td>2年(332①)短○長×</td>
+							</tr>
+							<tr>
+								<th>非公開会社</th>
+								<td>10年まで長○(332②)</td>
+							</tr>
+							<tr>
+								<th>委員会設置会社</th>
+								<td>1年(332③⑥)</td>
+							</tr>
+						</table>
+						<dl>
+							<dt>社外取締役</dt>
+							<dd>就任前<strong>10年間</strong>会社または子会社の業務執行に携わったことがなく、業務執行者からの独立性の強い取締役(2xv)</dd>
+						</dl>
+						<aside data-title="取締役の選任">
+							<ul>
+								<li>株主総会決議による(329①)</li>
+								<li>定足数の下限(341)</li>
+								<li>累積投票制度(342)</li>
+							</ul>
+						</aside>
+						<aside data-title="取締役の退任">
+							<aside data-title="退任事由">
+								<ul>
+									<li>死亡・破産(民653)</li>
+									<li>任期満了</li>
+									<li>欠格事由(331①)発生</li>
+									<li>辞任(民651)</li>
+									<li>解任</li>
+									<li>会社の解散</li>
+								</ul>
+							</aside>
+							<aside data-title="解任">
+								<ul>
+									<li>株主総会の普通決議(339①)</li>
+									<li>少数株主による解任の訴え(854①)</li>
+								</ul>
+							</aside>
+							<p>正当な理由のない解任における取締役の損害賠償請求権(339②)</p>
+							<p>普通決議によって選任された取締役・監査等委員会設置会社の監査委員は特別決議が必要(309②vii)</p>
+						</aside>
 					</div>
 				</details>
 				<details id="hl4.2">
 					<summary>取締役会</summary>
 					<div>
-						<details id="hl4.2.1">
-							<summary>取締役会の意義</summary>
-							<div></div>
-						</details>
-						<details id="hl4.2.2">
+						<dl>
+							<dt>取締役会</dt>
+							<dd>取締役全員によって構成され、会社の業務執行を<strong>決定</strong>し、取締役の業務執行を<strong>監督</strong>する機関(362①②)</dd>
+						</dl>
+						<details>
 							<summary>取締役会の権限</summary>
-							<div></div>
+							<div>
+								<p>業務執行全般。</p>
+								<ul>
+									<li>重要な業務執行:取締役会の専決事項(362④)
+										<aside>
+											<p>取締役の数が<strong>6人</strong>以上であって、その1人以上が<strong>社外取締役</strong>である場合、予め選定した<strong>3人</strong>以上の<strong>特別取締役</strong>の決議をもって、重要な財産の処分及び譲受・<strong>多額の借財</strong>を決定することができる(373①)</p>
+										</aside>
+									</li>
+									<li>内部統制システムの構築(362④vi,⑤)</li>
+									<li>社外取締役への業務執行委託(348の2)</li>
+								</ul>
+							</div>
 						</details>
-						<details id="hl4.2.3">
+						<details>
 							<summary>取締役会の決議</summary>
-							<div></div>
-						</details>
-						<details id="hl4.2.4">
-							<summary>取締役会の決議の瑕疵</summary>
-							<div></div>
+							<div>
+								<ul>
+									<li>決議要件:一人位置議決権に基づく頭数多数決(369①)</li>
+									<li>代理人による議決権行使:不可</li>
+									<li>書面による決議:可(370,なお373④)</li>
+									<li>電磁的方法による決議:不可</li>
+									<li>特別利害関係人:議決権排除(369②)</li>
+								</ul>
+								<aside data-title="決議の瑕疵">
+									<p>主張制限なし。</p>
+									<p>手続上・内容上の瑕疵がある場合には無効となる。</p>
+								</aside>
+							</div>
 						</details>
 					</div>
 				</details>
 				<details id="hl4.3">
 					<summary>代表取締役</summary>
 					<div>
+						<dl>
+							<dt>代表取締役</dt>
+							<dd>会社の業務を</dd>
+						</dl>
 						<details id="hl4.3.1">
 							<summary>代表取締役の意義</summary>
 							<div></div>
@@ -266,7 +713,7 @@
 							<div></div>
 						</details>
 						<details id="hl4.5.2">
-							<summary>取締役の敬仰禁止義務</summary>
+							<summary>取締役の競業禁止義務</summary>
 							<div></div>
 						</details>
 						<details id="hl4.5.3">
@@ -278,6 +725,28 @@
 				<details id="hl4.6">
 					<summary>取締役の責任</summary>
 					<div>
+						<p>会社に対する責任</p>
+						<ul class="tree">
+							<li>一般的責任規定
+								<ul>
+									<li>一般的責任(損害賠償責任)(423①)
+										<ul>
+											<li>必要な承認決議がない競業取引(423②)</li>
+											<li>利益相反取引(423③④)</li>
+											<li>自己のために直接取引をした場合(428①)</li>
+										</ul>
+									</li>
+									<li>連帯責任(430)</li>
+									<li>責任免除
+										<ol>
+											<li>総株主の同意(424)</li>
+											<li>一部免除(425-427,なお428②)</li>
+										</ol>
+									</li>
+								</ul>
+							</li>
+							<li>個別的責任</li>
+						</ul>
 						<details id="hl4.6.1">
 							<summary>会社に対する一般的責任</summary>
 							<div></div>
@@ -359,124 +828,14 @@
 				</details>
 			</div>
 		</details>
-		<details id="table">
-			<summary>表</summary>
-			<div class="small">
-				<table class="center">
-					<caption>会社の種類</caption>
-					<tr>
-						<th></th>
-						<th>種類</th>
-						<th>地位</th>
-						<th>割合</th>
-						<th>責任</th>
-					</tr>
-					<tr>
-						<td>株式会社</td>
-						<th>株式会社</th>
-						<td>株式</td>
-						<td>均等</td>
-						<td>間接有限</td>
-					</tr>
-					<tr>
-						<td rowspan="3">持分会社</td>
-						<th>合名会社</td>
-						<td rowspan="3">持分</td>
-						<td rowspan="3">出資額</td>
-						<td>直接無限</td>
-					</tr>
-					<tr>
-						<th>合資会社</th>
-						<td>直接無限<br />＋<br />直接有限</td>
-					</tr>
-					<tr>
-						<th>合同会社</td>
-						<td>有限<br />(形式: 直接<br />実質: 間接)</td>
-					</tr>
-				</table>
-				<table class="center">
-					<caption>株式会社の機関</caption>
-					<tr>
-						<th rowspan="2"></th>
-						<th colspan="2">非公開会社</th>
-						<th colspan="2">公開会社</th>
-						<th rowspan="2">指名委員会等設置会社</th>
-						<th rowspan="2">監査等委員会設置会社</th>
-					</tr>
-					<tr>
-						<th>非大会社</th>
-						<th>大会社</th>
-						<th>非大会社</th>
-						<th>大会社</th>
-					</tr>
-					<tr>
-						<th>株主総会</th>
-						<td colspan="6" class="main">必須</td>
-					</tr>
-					<tr>
-						<th>取締役</th>
-						<td colspan="6" class="main">必須</td>
-					</tr>
-					<tr>
-						<th>取締役会</th>
-						<td colspan="2">任意</td>
-						<td colspan="2" class="main">必須</td>
-						<td class="main">必須</td>
-						<td class="main">必須</td>
-					</tr>
-					<tr>
-						<th>監査役</th>
-						<td>任意*</td>
-						<td class="main">必須</td>
-						<td colspan="2" class="main">必須</td>
-						<td class="sub">不可</td>
-						<td class="sub">不可</td>
-					</tr>
-					<tr>
-						<th>監査役会</th>
-						<td colspan="2">任意</td>
-						<td>任意</td>
-						<td class="main">必須</td>
-						<td class="sub">不可</td>
-						<td class="sub">不可</td>
-					</tr>
-					<tr>
-						<th>会計監査</th>
-						<td>任意</td>
-						<td class="main">必須</td>
-						<td>任意</td>
-						<td class="main">必須</td>
-						<td class="main">必須</td>
-						<td class="main">必須</td>
-					</tr>
-					<tr>
-						<th>三委員会</th>
-						<td colspan="4" class="sub">-</td>
-						<td class="main">必須</td>
-						<td class="sub">不可</td>
-					</tr>
-					<tr>
-						<th>監査等委員会</th>
-						<td colspan="4" class="sub">-</td>
-						<td class="sub">不可</td>
-						<td class="main">必須</td>
-					</tr>
-					<tr>
-						<th>会計参与</th>
-						<td colspan="6">任意</td>
-					</tr>
-				</table>
-			</div>
-		</details>
 		<details id="test">
 			<summary>小テスト解答</summary>
 			<div>
 				<table class="row">
 					<tr>
-						<td>株式会社は法人であるが、持分会社は法人ではない。</td>
 						<td class="main">判例によれば、法人格否認の法理が適用される場合には法人格の濫用の場合と法人格の形骸化の場合とがある。</td>
 						<td class="main">判例によれば、定款所定の目的たる事業に属する行為のみならず、その目的遂行に必要または有益な行為によって生じた権利義務も、会社に帰属する。</td>
-						<td>公開会社とは、定款によりその発行する全部の株式について譲渡による株式の取得が制限されていない株式会社をいい、その発行する一部の種類の株式についてのみ譲渡による株式の取得が制限されている株式会社は、公開会社ではない。</td>
+						<td>公開会社とは、定款によりその発行する全部の株式について譲渡による株式の取得が制限されていない株式会社をいう。</td>
 						<td>会計参与は、非公開会社に限り、定款の定めにより設置することができる。</td>
 						<td>公開会社（指名委員会等設置会社と監査等委員会設置会社を除く）の取締役の任期は２年、監査役の任期は４年であるが、いずれの任期も、定款または株主総会決議をもって短縮することも伸長することもできない。</td>
 						<td>公開会社である大会社（指名委員会等設置会社と監査等委員会設置会社を除く）においては、３人以上の監査役全員によって監査役会を組織することを要し、その過半数は社外監査役であることを要する。</td>
