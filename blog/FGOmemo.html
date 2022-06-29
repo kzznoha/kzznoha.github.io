@@ -91,7 +91,7 @@
 				}
 			</style>
 			<defs>
-				<circle id="IconCircle" class="default" cx="0" cy="0" r="20" />
+				<circle id="IconCircle" cx="0" cy="0" r="20" />
 				<marker id="arrow_weak" class="weak fill" viewBox="0 0 10 10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth" markerWidth="6" markerHeight="6">
 					<path d="M 0,0 L 10,5 L 0,10 z" />
 				</marker>
@@ -100,9 +100,9 @@
 				</marker>
 				<g id="deadlock">
 					<rect class="group" x="0" y="0" width="140" height="130" />
-					<!--<use href="#IconCircle" x="30" y="70" />-->
-					<use href="#IconCircle" x="110" y="100" />
-					<use href="#IconCircle" x="30" y="100" />
+					<!--<use class="default" href="#IconCircle" x="30" y="70" />-->
+					<use class="default" href="#IconCircle" x="110" y="100" />
+					<use class="default" href="#IconCircle" x="30" y="100" />
 					<line class="weak" x1="90" x2="100" y1="64.5" y2="82" />
 					<line class="resist" x1="90" x2="80" y1="64.5" y2="47" />
 					<line class="weak" x1="70" x2="50" y1="100" y2="100" />
@@ -117,12 +117,12 @@
 			<use href="#deadlock" x="150" y="-430" transform="rotate(90)" />
 			<use href="#deadlock" x="-290" y="-430" transform="rotate(180)" />
 
-			<use href="#IconCircle" x="220" y="40" />
-			<use href="#IconCircle" x="40" y="220" />
-			<use href="#IconCircle" x="400" y="220" />
+			<use class="default" href="#IconCircle" x="220" y="40" />
+			<use class="default" href="#IconCircle" x="40" y="220" />
+			<use class="default" href="#IconCircle" x="400" y="220" />
 			<use class="weak" href="#IconCircle" x="220" y="400" />
 			<use class="weak half" href="#IconCircle" x="220" y="220" />
-			<use href="#IconCircle" x="360" y="360" />
+			<use class="default" href="#IconCircle" x="360" y="360" />
 
 			<text class="class" x="220" y="40">裁</text>
 			<text class="class" x="260" y="110">月</text>
