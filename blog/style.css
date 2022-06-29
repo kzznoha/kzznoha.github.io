@@ -45,7 +45,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	--bright-green: rgba(119, 217, 168, 1);
 	--bright-purple: rgba(201, 172, 230, 1);
 }
+/*COLOR*/
+:root{
+	--color: var(--black);
+	--back: var(--white);
+	--light: var(--gray);
+	--accent1: var(--red);
+	--accent2: var(--skyblue);
+}
+@media (prefers-color-scheme: dark) {
+	:root{
+		--color: var(--white);
+		--back: var(--black);
+		--light: var(--lightgray);
+	}
+}
 /*DESIGN*/
+html{
+	background-color: var(--back);
+	color: var(--color);
+}
 main{
 	padding: 1em;
 }
