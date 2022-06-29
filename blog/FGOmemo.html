@@ -6,6 +6,84 @@
 	<meta name="professer" content="裏見" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" href="style.css" />
+	<style>
+		/*THEME*/
+		:root {
+			--weak: var(--red);
+			--resist: var(--skyblue);
+			--back: var(--white);
+			--color: var(--black);
+		}
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--back: var(--black);
+				--color: var(--white);
+			}
+		}
+		/*CONTENT*/
+		* {
+			stroke-width: 1;
+			stroke-opacity: 1;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			transform-origin:center;
+		}
+		*:not(defs *):not(text), .default {
+			fill: none;
+			stroke: var(--color);
+		}
+		svg {
+			background-color: var(--back);
+		}
+		text {
+			font-family: "Noto Sans CJK JP", sans-serif;
+			font-size: 10px;
+			text-align: center;
+			text-anchor: middle;
+			dominant-baseline: middle;
+			fill: var(--color);
+			stroke: none;
+		}
+
+		/*OTHER*/
+		rect.group {
+			fill: none;
+			stroke: var(--color);
+			stroke-dasharray: 1 3;
+			rx: 20;
+			ry: 20;
+		}
+		.icon {
+			stroke: none;
+			fill: var(--color);
+			width: 40;
+			height: 40;
+		}
+
+		/*TEXT*/
+		text.class {
+			font-size: 14px;
+		}
+
+		/*COLOR*/
+		.weak {
+			stroke: var(--weak);
+			marker-end: url(#arrow_weak);
+		}
+		.weak.half {
+			stroke-dasharray: 3 3;
+		}
+		.weak.fill {
+			fill: var(--weak);
+		}
+		.resist {
+			stroke: var(--resist);
+			marker-end: url(#arrow_resist);
+		}
+		.resist.fill {
+			fill: var(--resist)
+		}
+	</style>
 </head>
 
 <body>
@@ -16,86 +94,15 @@
 		<p>毎回ルーラーまわりの相性を間違えるので作ったもの。公式の相性図よりは(多分)わかりやすい図になった。</p>
 		<p>自画自賛になるが、この方が直感的ではないだろうか？運営さん、フリー素材にするので採用してくれませんかね。</p>
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" width="450" height="450" viewBox="0 0 450 450">
-			<title>FGO相性表</title>
-			<style>
-				/*THEME*/
-				:root{
-					--weak: var(--red);
-					--resist: var(--skyblue);
-					--back: var(--white);
-					--color: var(--black);
-				}
-				@media (prefers-color-scheme: dark) {
-					:root{
-						--back: var(--black);
-						--color: var(--white);
-					}
-				}
-				svg{
-					background-color: var(--back);
-				}
-				*{
-					stroke-width: 1;
-					stroke-opacity: 1;
-					stroke-linecap: round;
-					stroke-linejoin :round;
-				}
-				:not(defs *), .default{
-					fill: none;
-					stroke: var(--color);
-				}
-				text{
-					font-family: "Noto Sans CJK JP", sans-serif;
-					font-size: 10px;
-					text-align: center;
-					text-anchor: middle;
-					dominant-baseline: middle;
-					fill: var(--color);
-					stroke: none;
-				}
-				/*OTHER*/
-				rect.group{
-					fill: none;
-					stroke: var(--color);
-					stroke-dasharray: 1 3;
-					rx: 20;
-					ry: 20;
-				}
-				.icon{
-					stroke: none;
-					fill: var(--color);
-					width: 40;
-					height: 40;
-				}
-				/*TEXT*/
-				text.class{
-					font-size: 14px;
-				}
-				/*COLOR*/
-				.weak{
-					stroke: var(--weak);
-					marker-end: url(#arrow_weak);
-				}
-				.weak.half{
-					stroke-dasharray: 3 3;
-				}
-				.weak.fill{
-					fill: var(--weak);
-				}
-				.resist{
-					stroke: var(--resist);
-					marker-end: url(#arrow_resist);
-				}
-				.resist.fill{
-					fill: var(--resist)
-				}
-			</style>
+			<title>FGOクラス相性図</title>
 			<defs>
 				<circle id="IconCircle" cx="0" cy="0" r="20" />
-				<marker id="arrow_weak" class="weak fill" viewBox="0 0 10 10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth" markerWidth="6" markerHeight="6">
+				<marker id="arrow_weak" class="weak fill" viewBox="0 0 10 10" refX="10" refY="5" orient="auto"
+					markerUnits="strokeWidth" markerWidth="6" markerHeight="6">
 					<path d="M 0,0 L 10,5 L 0,10 z" />
 				</marker>
-				<marker id="arrow_resist" class="resist fill" viewBox="0 0 10 10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth" markerWidth="6" markerHeight="6">
+				<marker id="arrow_resist" class="resist fill" viewBox="0 0 10 10" refX="10" refY="5" orient="auto"
+					markerUnits="strokeWidth" markerWidth="6" markerHeight="6">
 					<path d="M 0,0 L 10,5 L 0,10 z" />
 				</marker>
 				<g id="deadlock">
@@ -111,19 +118,19 @@
 					<line class="resist" x1="50" x2="40" y1="64.5" y2="82" />
 				</g>
 			</defs>
-
+		
 			<use href="#deadlock" x="150" y="10" />
-			<use href="#deadlock" x="-290" y="10" transform="rotate(270)" />
-			<use href="#deadlock" x="150" y="-430" transform="rotate(90)" />
-			<use href="#deadlock" x="-290" y="-430" transform="rotate(180)" />
-
+			<use href="#deadlock" x="160" y="10" transform="rotate(270)" />
+			<use href="#deadlock" x="150" y="20" transform="rotate(90)" />
+			<use href="#deadlock" x="160" y="20" transform="rotate(180)" />
+		
 			<use class="default" href="#IconCircle" x="220" y="40" />
 			<use class="default" href="#IconCircle" x="40" y="220" />
 			<use class="default" href="#IconCircle" x="400" y="220" />
 			<use class="weak" href="#IconCircle" x="220" y="400" />
 			<use class="weak half" href="#IconCircle" x="220" y="220" />
 			<use class="default" href="#IconCircle" x="360" y="360" />
-
+		
 			<text class="class" x="220" y="40">裁</text>
 			<text class="class" x="260" y="110">月</text>
 			<text class="class" x="180" y="110">讐</text>
@@ -138,7 +145,7 @@
 			<text class="class" x="180" y="330">詐</text>
 			<text class="class" x="220" y="220">狂</text>
 			<text class="class" x="360" y="360">盾</text>
-
+		
 			<line class="weak" x1="220" x2="220" y1="170" y2="200" />
 			<line class="weak half" x1="220" x2="220" y1="170" y2="140" />
 			<line class="weak" x1="170" x2="200" y1="220" y2="220" />
@@ -157,14 +164,14 @@
 			<line class="resist" x1="197" x2="300" y1="320" y2="259" />
 			<line class="resist" x1="243" x2="140" y1="320" y2="259" />
 			<line class="weak half" x1="274" x2="310" y1="316" y2="288" />
-
+		
 			<line class="weak" x1="25" x2="75" y1="320" y2="320" />
 			<text x="50" y="330">×2.0</text>
 			<line class="weak half" x1="25" x2="75" y1="350" y2="350" />
 			<text x="50" y="360">×1.5</text>
 			<line class="resist" x1="25" x2="75" y1="380" y2="380" />
 			<text x="50" y="390">×0.5</text>
-			</svg>
+		</svg>
 	</main>
 </body>
 
