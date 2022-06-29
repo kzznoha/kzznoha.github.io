@@ -45,3 +45,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	--bright-green: rgba(119, 217, 168, 1);
 	--bright-purple: rgba(201, 172, 230, 1);
 }
+/*DESIGN*/
+main{
+	padding: 1em;
+}
