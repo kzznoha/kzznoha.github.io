@@ -22,7 +22,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /*COLOR UNIVERSAL DESIGN*/
 :root{
-	--white: rgba(255, 255, 255, 1);
+	--white: rgba(254, 254, 254, 1);
 	--lightgray: rgba(200, 200, 203, 1);
 	--gray: rgba(132, 145, 158, 1);
 	--black: rgba(0, 0, 0, 1);
