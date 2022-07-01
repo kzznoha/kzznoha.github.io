@@ -47,16 +47,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /*COLOR*/
 :root{
-	--color: var(--black);
-	--back: var(--white);
+	--color: var(--white);
+	--back: var(--black);
 	--light: var(--gray);
 	--accent1: var(--red);
 	--accent2: var(--skyblue);
 }
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
 	:root{
-		--color: var(--white);
-		--back: var(--black);
+		--color: var(--black);
+		--back: var(--white);
 		--light: var(--lightgray);
 	}
 }
