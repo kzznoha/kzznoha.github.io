@@ -5,8 +5,33 @@
 	<title>FGO備忘録 | くずかご書房</title>
 	<meta name="professer" content="裏見" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="base.css" />
 	<style>
+		:root{
+	--white: rgba(255, 255, 255, 1);
+	--lightgray: rgba(200, 200, 203, 1);
+	--gray: rgba(132, 145, 158, 1);
+	--black: rgba(0, 0, 0, 1);
+
+	--red: rgba(255, 75, 0, 1);
+	--yellow: rgba(255, 241, 0, 1);
+	--green: rgba(3, 175, 122, 1);
+	--blue: rgba(0, 90, 255, 1);
+	--skyblue: rgba(77, 196, 255, 1);
+	--pink: rgba(255, 128, 130, 1);
+	--orange: rgba(246, 170, 0, 1);
+	--purple: rgba(153, 0, 153, 1);
+	--brown: rgba(128, 64, 0, 1);
+
+	--bright-pink: rgba(255, 202, 191, 1);
+	--bright-cream: rgba(255, 255, 128, 1);
+	--bright-yellowgreen: rgba(216, 242, 85, 1);
+	--bright-skyblue: rgba(191, 228, 255, 1);
+	--bright-beige: rgba(255, 202, 128, 1);
+	--bright-green: rgba(119, 217, 168, 1);
+	--bright-purple: rgba(201, 172, 230, 1);
+}
+
 		/*THEME*/
 		:root {
 			--weak: var(--red);
@@ -31,8 +56,6 @@
 			stroke-linecap: round;
 			stroke-linejoin: round;
 			transform-origin: center;
-		}
-		*:where(*:not(defs *):not(text), .default) {
 			fill: none;
 			stroke: var(--color);
 		}
@@ -47,6 +70,9 @@
 		}
 
 		/*OTHER*/
+		.fill{
+			fill: var(--color);
+		}
 		rect.group {
 			fill: none;
 			stroke: var(--gray);
@@ -66,24 +92,21 @@
 
 		/*COLOR*/
 		.weak {
-			stroke: var(--weak);
-			marker-end: url(#arrow_weak);
+			filter: url("#weak_filter");
+			marker-end: url(#arrow);
 		}
 
 		.weak.half {
-			stroke-dasharray: 3 3;
-		}
-
-		.weak.fill {
-			fill: var(--weak);
+			stroke-dasharray: 0 3 3 3;
 		}
 
 		.resist {
-			stroke: var(--resist);
-			marker-end: url(#arrow_resist);
+			
+			filter: url("#resist_filter");
+			marker-end: url(#arrow);
 		}
 		.resist:not(marker){
-			stroke-dasharray: 6 2 1 2;
+			stroke-dasharray: 3 3;
 		}
 
 		.resist.fill {
@@ -103,13 +126,22 @@
 			<title>FGOクラス相性図</title>
 			<defs>
 				<circle id="IconCircle" cx="0" cy="0" r="20" />
-				<marker id="arrow_weak" class="weak fill" viewBox="0 0 10 10" refX="10" refY="5" orient="auto"
-					markerUnits="strokeWidth" markerWidth="6" markerHeight="6">
-					<path d="M 0,0 L 10,5 L 0,10 z" />
-				</marker>
-				<marker id="arrow_resist" class="resist fill" viewBox="0 0 10 10" refX="10" refY="5" orient="auto"
-					markerUnits="strokeWidth" markerWidth="6" markerHeight="6">
-					<path d="M 0,0 L 10,5 L 0,10 z" />
+				<filter id="weak_filter" filterUnits="userSpaceOnUse">
+					<feComponentTransfer>
+						<feFuncR type="linear" slope="0" intercept="1" /><!--255-->
+						<feFuncG type="linear" slope="0" intercept="0.294" /><!--75-->
+						<feFuncB type="linear" slope="0" intercept="0" /><!--0-->
+					</feComponentTransfer>
+				</filter>
+				<filter id="resist_filter" filterUnits="userSpaceOnUse">
+					<feComponentTransfer>
+						<feFuncR type="linear" slope="0" intercept="0.301" /><!--77-->
+						<feFuncG type="linear" slope="0" intercept="0.768" /><!--196-->
+						<feFuncB type="linear" slope="0" intercept="1" /><!--1-->
+					</feComponentTransfer>
+				</filter>
+				<marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth" markerWidth="6" markerHeight="6">
+					<path class="fill" d="M 0,0 L 10,5 L 0,10 z" />
 				</marker>
 				<g id="deadlock">
 					<rect class="group" x="0" y="0" width="140" height="130" />
