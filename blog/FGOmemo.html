@@ -5,20 +5,21 @@
 	<title>FGO備忘録 | くずかご書房</title>
 	<meta name="professer" content="裏見" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="color-scheme" content="dark light">
 	<link rel="stylesheet" href="style.css" />
 	<style>
 		/*THEME*/
 		:root {
 			--weak: var(--red);
 			--resist: var(--skyblue);
-			--back: var(--white);
-			--color: var(--black);
+			--back: var(--black);
+			--color: var(--white);
 		}
 
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: light) {
 			:root {
-				--back: var(--black);
-				--color: var(--white);
+				--back: var(--white);
+				--color: var(--black);
 			}
 		}
 
@@ -104,14 +105,14 @@
 				<filter id="weak_filter" filterUnits="userSpaceOnUse">
 					<feComponentTransfer>
 						<feFuncR type="linear" slope="0" intercept="1" /><!--255-->
-						<feFuncG type="linear" slope="0" intercept="0.294" /><!--75-->
+						<feFuncG type="linear" slope="0" intercept="0.29411764705" /><!--75-->
 						<feFuncB type="linear" slope="0" intercept="0" /><!--0-->
 					</feComponentTransfer>
 				</filter>
 				<filter id="resist_filter" filterUnits="userSpaceOnUse">
 					<feComponentTransfer>
-						<feFuncR type="linear" slope="0" intercept="0.301" /><!--77-->
-						<feFuncG type="linear" slope="0" intercept="0.768" /><!--196-->
+						<feFuncR type="linear" slope="0" intercept="0.30196078431" /><!--77-->
+						<feFuncG type="linear" slope="0" intercept="0.76862745098" /><!--196-->
 						<feFuncB type="linear" slope="0" intercept="1" /><!--1-->
 					</feComponentTransfer>
 				</filter>
