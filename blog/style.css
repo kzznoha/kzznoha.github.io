@@ -81,7 +81,7 @@ h3+* {
 table {
 	width: 100%;
 	border-collapse: collapse;
-
+	table-layout: fixed;
 }
 *:where(th, td) {
 	padding: 0.5em;
@@ -90,7 +90,4 @@ table {
 }
 th{
 	text-align: center;
-}
-.fix {
-	table-layout: fixed;
 }
