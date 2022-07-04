@@ -21,21 +21,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	max-width: 100%;
 }
 
-/*COLOR*/
-:root{
-	--color: var(--white);
-	--back: var(--black);
-	--light: var(--lightgray);
-	--accent1: var(--red);
-	--accent2: var(--skyblue);
-}
-@media (prefers-color-scheme: light) {
-	:root{
-		--color: var(--black);
-		--back: var(--white);
-		--light: var(--gray);
-	}
-}
 /*DESIGN*/
 html {
 	background-color: var(--back);
