@@ -61,10 +61,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	}
 }
 /*DESIGN*/
-html{
+html {
 	background-color: var(--back);
 	color: var(--color);
+	font-size: 14px;
 }
-main{
+main {
 	padding: 1em;
+}
+/*H3*/
+h3 {
+	font-size: 1.5em;
+	border-bottom: 1px solid var(--color);
+	padding: 1em;
+}
+/*TABLE*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+
+}
+*:where(th, td) {
+	padding: 0.5em;
+	vertical-align: middle;
+	border: 1px solid var(--text);
+}
+.fix {
+	table-layout: fixed;
 }
