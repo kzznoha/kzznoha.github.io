@@ -2,15 +2,6 @@
 :root {
 	--weak: var(--red);
 	--resist: var(--skyblue);
-	--back: var(--black);
-	--color: var(--white);
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		--back: var(--white);
-		--color: var(--black);
-	}
 }
 
 /*CONTENT*/
