@@ -7,7 +7,99 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta name="color-scheme" content="dark light">
 	<link rel="stylesheet" href="style.css" />
-	<style>
+	<style>/*RESET*/
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+	all: unset;
+	display: revert;
+}
+*, *::after, *::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+body {
+	min-height: 100vh;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	text-align: justify;
+	font-synthesis: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hr, blockquote, img{
+	display: block;
+	max-width: 100%;
+}
+/*COLOR UNIVERSAL DESIGN*/
+:root{
+	--white: rgba(254, 254, 254, 1);
+	--lightgray: rgba(200, 200, 203, 1);
+	--gray: rgba(132, 145, 158, 1);
+	--black: rgba(0, 0, 0, 1);
+
+	--red: rgba(255, 75, 0, 1);
+	--yellow: rgba(255, 241, 0, 1);
+	--green: rgba(3, 175, 122, 1);
+	--blue: rgba(0, 90, 255, 1);
+	--skyblue: rgba(77, 196, 255, 1);
+	--pink: rgba(255, 128, 130, 1);
+	--orange: rgba(246, 170, 0, 1);
+	--purple: rgba(153, 0, 153, 1);
+	--brown: rgba(128, 64, 0, 1);
+
+	--bright-pink: rgba(255, 202, 191, 1);
+	--bright-cream: rgba(255, 255, 128, 1);
+	--bright-yellowgreen: rgba(216, 242, 85, 1);
+	--bright-skyblue: rgba(191, 228, 255, 1);
+	--bright-beige: rgba(255, 202, 128, 1);
+	--bright-green: rgba(119, 217, 168, 1);
+	--bright-purple: rgba(201, 172, 230, 1);
+}
+/*COLOR*/
+:root{
+	--color: var(--white);
+	--back: var(--black);
+	--light: var(--lightgray);
+	--accent1: var(--red);
+	--accent2: var(--skyblue);
+}
+@media (prefers-color-scheme: light) {
+	:root{
+		--color: var(--black);
+		--back: var(--white);
+		--light: var(--gray);
+	}
+}
+/*DESIGN*/
+html {
+	background-color: var(--back);
+	color: var(--color);
+	font-size: 14px;
+}
+main {
+	padding: 1em;
+}
+/*H3*/
+h3 {
+	font-size: 1.5em;
+	border-bottom: 1px solid var(--color);
+	padding: 0.5em;
+h3+* {
+	padding: 1em;
+}
+/*TABLE*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+*:where(th, td) {
+	padding: 0.5em;
+	vertical-align: middle;
+	border: 1px solid var(--color);
+}
+th{
+	text-align: center;
+}
 		/*THEME*/
 		:root {
 			--weak: var(--red);
