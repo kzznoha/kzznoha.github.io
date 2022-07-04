@@ -14,7 +14,6 @@ svg {
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	transform-origin: center;
-	fill: none;
 	stroke: var(--color);
 }
 
