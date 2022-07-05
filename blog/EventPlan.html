@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head><!DOCTYPE html>
+
+<head>
+	<!DOCTYPE html>
 	<html>
-	
+
 	<head>
 		<title>FGOイベント計画帳 | くずかご書房</title>
 		<meta name="professer" content="裏見" />
@@ -12,114 +14,122 @@
 		<link rel="stylesheet" href="palette.css" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
-<style>
-	table{
-		table-layout: fixed;
-		text-align: center;
-	}
-	input{
-		padding: 0.5em 0.25em;
-		max-width: 100%;
-		border: 1px solid var(--color);
-		background-color: transparent;
-	}
-</style>
-</head>
-<body onload="EventKeisan()">
-	<h1>FGOイベント計画帳</h1>
-	<p>FGOのイベントにおいて、AP自然回復で最高効率のフリクエを走った場合の最終的なアイテム獲得数予測計算機。遠征や発掘なんかの他のポイント獲得手段は考慮に入れていない。自分用なので先に伝承結晶や概念礼装を取得し終えた前提で組んであったりする。あんまり参考にはならないだろう…</p>
-	<form name="event" oninput="EventKeisan()">
-		<table>
-		<tr>
-			<td colspan="3">期間:-<output name="time"></output></td>
-			<td colspan="3">残りAP:<output name="ap"></output></td>
-		</tr>
-		<tr>
-			<th>アイテム</th>
-			<th>効率</th>
-			<th>現在</th>
-			<th>推定</th>
-			<th>必要</th>
-			<th>過不足</th>
-		</tr>
-		<tr>
-			<th>転々手毬</th>
-			<td><output name="Item1_Efficiency"></output></td>
-			<td><input type="number" name="Item1_Now" autofocus></td>
-			<td><output name="Item1_Pre"></output></td>
-			<td><output name="Item1_Goal"></output></td>
-			<td><output name="Item1_Left"></output></td>
-		</tr>
-		<tr>
-			<th>噛々縄索</th>
-			<td><output name="Item2_Efficiency"></output></td>
-			<td><input type="number" name="Item2_Now"></td>
-			<td><output name="Item2_Pre"></output></td>
-			<td><output name="Item2_Goal"></output></td>
-			<td><output name="Item2_Left"></output></td>
-		</tr>
-		<tr>
-			<th>白々御飯</th>
-			<td><output name="Item3_Efficiency"></output></td>
-			<td><input type="number" name="Item3_Now"></td>
-			<td><output name="Item3_Pre"></output></td>
-			<td><output name="Item3_Goal"></output></td>
-			<td><output name="Item3_Left"></output></td>
-		</tr>
-		<tr>
-			<th>ポイント</th>
-			<td><output name="Point_Efficiency"></output></td>
-			<td><input type="number" name="Point_Now"></td>
-			<td><output name="Point_Pre"></output></td>
-			<td><output name="Point_Goal"></output></td>
-			<td><output name="Point_Left"></output></td>
-		</tr>
-		</tr>
-	</table>
-	</form>
-</body>
-	<script>
-		function EventKeisan(){
-			const nowDate = new Date();
-			const lastDate = new Date('2022-07-20 12:59:00');
-
-			let YYYY = lastDate.getFullYear();
-			let MM = ('0' + (lastDate.getMonth() + 1)).slice(-2);
-			let DD = ('0' + lastDate.getDate()).slice(-2);
-			let H = ('0' + lastDate.getHours()).slice(-2);
-			let M = ('0' + lastDate.getMinutes()).slice(-2);
-			let S = ('0' + lastDate.getSeconds()).slice(-2);
-
-			const Effeciency = [0.69, 0.71, 0.67, 318.75];
-			const Goal = [2900, 2500, 3400, 3000000];
-			const Now = [];
-			const Pre = [];
-			const Left = [];
-
-			const Form = document.forms.event;
-			const Content_Now = [Form.elements.Item1_Now, Form.elements.Item2_Now, Form.elements.Item3_Now, Form.elements.Point_Now];
-			const Result_Efficiency = [Form.elements.Item1_Efficiency, Form.elements.Item2_Efficiency, Form.elements.Item3_Efficiency, Form.elements.Point_Efficiency];
-			const Result_Pre = [Form.elements.Item1_Pre, Form.elements.Item2_Pre, Form.elements.Item3_Pre, Form.elements.Point_Pre];
-			const Result_Goal = [Form.elements.Item1_Goal, Form.elements.Item2_Goal, Form.elements.Item3_Goal, Form.elements.Point_Goal];
-			const Result_Left = [Form.elements.Item1_Left, Form.elements.Item2_Left, Form.elements.Item3_Left, Form.elements.Point_Left];
-
-			let TimeLeft = Number(lastDate.getTime() - nowDate.getTime()) / (60 * 1000);
-			let ApLeft = Math.floor(Number(TimeLeft) / 5 + 137);
-
-			Form.elements.ap.value = ApLeft;
-			Form.elements.time.value = YYYY + '/' + MM + '/' + DD + ' ' + H + ':' + M + ':' + S;
-
-			for(let i = 0;i < 4; i++){
-				Now[i] = Number(Content_Now[i].value);
-				Pre[i] = Math.floor(ApLeft * Effeciency[i] + Now[i]);
-				Left[i] = Math.floor(Pre[i] - Goal[i]);
-
-				Result_Efficiency[i].value = Effeciency[i];
-				Result_Pre[i].value = Pre[i];
-				Result_Goal[i].value = Goal[i];
-				Result_Left[i].value = Left[i];
-			}
-
+	<style>
+		table {
+			table-layout: fixed;
+			text-align: center;
 		}
-	</script>
+
+		input {
+			padding: 0.5em 0.25em;
+			max-width: 100%;
+			border: 1px solid var(--color);
+			background-color: transparent;
+		}
+	</style>
+</head>
+
+<body onload="EventKeisan()">
+	<main>
+		<h2>くずかご書房</h2>
+		<h1>FGOイベント計画帳</h1>
+		<p>
+			FGOのイベントにおいて、AP自然回復で最高効率のフリクエを走った場合の最終的なアイテム獲得数予測計算機。遠征や発掘なんかの他のポイント獲得手段は考慮に入れていない。自分用なので先に伝承結晶や概念礼装を取得し終えた前提で組んであったりする。あんまり参考にはならないだろう…
+		</p>
+		<form name="event" oninput="EventKeisan()">
+			<table>
+				<tr>
+					<td colspan="3">期間:-<output name="time"></output></td>
+					<td colspan="3">残りAP:<output name="ap"></output></td>
+				</tr>
+				<tr>
+					<th>アイテム</th>
+					<th>効率</th>
+					<th>現在</th>
+					<th>推定</th>
+					<th>必要</th>
+					<th>過不足</th>
+				</tr>
+				<tr>
+					<th>転々手毬</th>
+					<td><output name="Item1_Efficiency"></output></td>
+					<td><input type="number" name="Item1_Now" autofocus></td>
+					<td><output name="Item1_Pre"></output></td>
+					<td><output name="Item1_Goal"></output></td>
+					<td><output name="Item1_Left"></output></td>
+				</tr>
+				<tr>
+					<th>噛々縄索</th>
+					<td><output name="Item2_Efficiency"></output></td>
+					<td><input type="number" name="Item2_Now"></td>
+					<td><output name="Item2_Pre"></output></td>
+					<td><output name="Item2_Goal"></output></td>
+					<td><output name="Item2_Left"></output></td>
+				</tr>
+				<tr>
+					<th>白々御飯</th>
+					<td><output name="Item3_Efficiency"></output></td>
+					<td><input type="number" name="Item3_Now"></td>
+					<td><output name="Item3_Pre"></output></td>
+					<td><output name="Item3_Goal"></output></td>
+					<td><output name="Item3_Left"></output></td>
+				</tr>
+				<tr>
+					<th>ポイント</th>
+					<td><output name="Point_Efficiency"></output></td>
+					<td><input type="number" name="Point_Now"></td>
+					<td><output name="Point_Pre"></output></td>
+					<td><output name="Point_Goal"></output></td>
+					<td><output name="Point_Left"></output></td>
+				</tr>
+				</tr>
+			</table>
+		</form>
+	</main>
+</body>
+<script>
+	function EventKeisan() {
+		const nowDate = new Date();
+		const lastDate = new Date('2022-07-20 12:59:00');
+
+		let YYYY = lastDate.getFullYear();
+		let MM = ('0' + (lastDate.getMonth() + 1)).slice(-2);
+		let DD = ('0' + lastDate.getDate()).slice(-2);
+		let H = ('0' + lastDate.getHours()).slice(-2);
+		let M = ('0' + lastDate.getMinutes()).slice(-2);
+		let S = ('0' + lastDate.getSeconds()).slice(-2);
+
+		const Effeciency = [0.69, 0.71, 0.67, 318.75];
+		const Goal = [2900, 2500, 3400, 3000000];
+		const Now = [];
+		const Pre = [];
+		const Left = [];
+
+		const Form = document.forms.event;
+		const Content_Now = [Form.elements.Item1_Now, Form.elements.Item2_Now, Form.elements.Item3_Now, Form.elements.Point_Now];
+		const Result_Efficiency = [Form.elements.Item1_Efficiency, Form.elements.Item2_Efficiency, Form.elements.Item3_Efficiency, Form.elements.Point_Efficiency];
+		const Result_Pre = [Form.elements.Item1_Pre, Form.elements.Item2_Pre, Form.elements.Item3_Pre, Form.elements.Point_Pre];
+		const Result_Goal = [Form.elements.Item1_Goal, Form.elements.Item2_Goal, Form.elements.Item3_Goal, Form.elements.Point_Goal];
+		const Result_Left = [Form.elements.Item1_Left, Form.elements.Item2_Left, Form.elements.Item3_Left, Form.elements.Point_Left];
+
+		let TimeLeft = Number(lastDate.getTime() - nowDate.getTime()) / (60 * 1000);
+		let ApLeft = Math.floor(Number(TimeLeft) / 5 + 137);
+
+		Form.elements.ap.value = ApLeft;
+		Form.elements.time.value = YYYY + '/' + MM + '/' + DD + ' ' + H + ':' + M + ':' + S;
+
+		for (let i = 0; i < 4; i++) {
+			Now[i] = Number(Content_Now[i].value);
+			Pre[i] = Math.floor(ApLeft * Effeciency[i] + Now[i]);
+			Left[i] = Math.floor(Pre[i] - Goal[i]);
+
+			Result_Efficiency[i].value = Effeciency[i];
+			Result_Pre[i].value = Pre[i];
+			Result_Goal[i].value = Goal[i];
+			Result_Left[i].value = Left[i];
+		}
+
+	}
+</script>
+
 </html>
