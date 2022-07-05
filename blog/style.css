@@ -49,21 +49,21 @@ html {
 main {
 	padding: 1rem;
 }
-/*H1*/
-h1 {
-	font-size: 2rem;
-	border-bottom: 3px double var(--color);
-	padding: 1rem;
-	margin-bottom: 1rem;
-}
-/*H2*/
-.blogtitle:where(h1, h2) {
+/*TITLE*/
+#blogtitle {
 	text-align: center;
 	font-size: 2.4rem;
 	padding: 2rem;
 	margin-bottom: 2rem;
 	text-stroke: 1px var(--back);
 	background-image: repeating-linear-gradient(-45deg, var(--light), var(--light) 7.5px, transparent 0, transparent 15px);
+}
+/*H1*/
+h1 {
+	font-size: 2rem;
+	border-bottom: 3px double var(--color);
+	padding: 1rem;
+	margin-bottom: 1rem;
 }
 /*H3*/
 h3 {
