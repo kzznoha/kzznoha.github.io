@@ -78,8 +78,10 @@ main {
 #header nav li{
 	display: block;
 	flex-grow: 1;
-	padding: 1rem 0.5rem;
-	margin: 0.1rem 0;
+	padding: 1rem;
+	width: 100%;
+	text-align: center;
+	margin: 0.1rem;
 	background-color: var(--accent1);
 	color: var(--back);
 }
