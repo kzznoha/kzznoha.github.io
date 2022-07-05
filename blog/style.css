@@ -10,6 +10,7 @@
 	font: inherit;
 	color: inherit;
 	background-color: transparent;
+	max-width: 100%;
 }
 html {
 	width: 100%;
@@ -21,7 +22,6 @@ html {
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hr, blockquote, img{
 	display: block;
-	max-width: 100%;
 }
 
 /*COLOR*/
@@ -55,7 +55,7 @@ main {
 	font-size: 2.4rem;
 	padding: 2rem;
 	margin-bottom: 2rem;
-	text-stroke: 1px var(--back);
+	background-color: var(--red);
 	background-image: repeating-linear-gradient(-45deg, var(--light), var(--light) 7.5px, transparent 0, transparent 15px);
 }
 /*H1*/
