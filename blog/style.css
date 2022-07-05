@@ -61,21 +61,21 @@ main {
 	padding: 2rem;
 	color: var(--back);
 	background-color: var(--gray);
-	background-image: repeating-linear-gradient(-45deg, var(--accent2-bright), var(--accent2-bright) 10px, transparent 0, transparent 3px);
+	background-image: repeating-linear-gradient(-45deg, var(--accent2), var(--accent2) 5px, transparent 0, transparent 10px);
 }
 #header nav ul{
 	display: flex;
 	justify-content: space-between;
+	list-item: none;
 }
 #header nav li{
 	padding: 1rem 0.5rem;
 	margin: 0.2rem;
-	background-color: var(--light);
+	background-color: var(--gray);
 	color: var(--back);
 }	
 #header nav li:hover{
-	background-color: var(--accent2);
-	color: var(--color);
+	background-color: var(--accent2-bright);
 }
 /*H1*/
 h1 {
