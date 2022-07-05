@@ -4,7 +4,7 @@
 	<html>
 	
 	<head>
-		<title>FGO備忘録 | くずかご書房</title>
+		<title>FGOイベント計画帳 | くずかご書房</title>
 		<meta name="professer" content="裏見" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta name="color-scheme" content="dark light">
@@ -21,10 +21,13 @@
 		padding: 0.5em 0.25em;
 		max-width: 100%;
 		border: 1px solid var(--color);
+		background-color: transparent;
 	}
 </style>
 </head>
 <body onload="EventKeisan()">
+	<h1>FGOイベント計画帳</h1>
+	<p>FGOのイベントにおいて、AP自然回復で最高効率のフリクエを走った場合の最終的なアイテム獲得数予測計算機。遠征や発掘なんかの他のポイント獲得手段は考慮に入れていない。自分用なので先に伝承結晶や概念礼装を取得し終えた前提で組んであったりする。あんまり参考にはならないだろう…</p>
 	<form name="event" oninput="EventKeisan()">
 		<table>
 		<tr>
