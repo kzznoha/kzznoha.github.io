@@ -81,15 +81,15 @@ main {
 	padding: 1rem;
 	width: 100%;
 	text-align: center;
-	margin: 0.1rem 0.2rem;
+	margin: 0.2rem 0.1rem;
 	background-color: var(--accent1);
 	color: var(--back);
 }
 #header nav li:first-child{
-	margin-left: none;
+	margin-left: 0;
 }
 #header nav li:last-child{
-	margin-right: none;
+	margin-right: 0;
 }
 #header nav li:hover{
 	background-color: var(--accent2);
