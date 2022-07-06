@@ -10,6 +10,14 @@
 	<link rel="stylesheet" href="palette.css" />
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="svg.css" />
+	<style>
+		.center{
+			text-align: center;
+		}
+		.vertical{
+			writing-mode: vertical-rl;
+		}
+	</style>
 </head>
 
 <body>
@@ -228,6 +236,92 @@
 			</tr>
 		</table>
 		<p>※なお、ライダーのアストルフォのみ被ダメージ時NP獲得量が1%らしい。……なぜ？</p>
+		<h3>防御系スキルのはたらき方</h3>
+		<p>防御系スキルも多様だが、それを貫通するための攻撃系スキルもまた多様……そしてそれぞれの関係がいやに分かりにくい、というのが現状。防御無視ではダメージカットは貫けないのだ。というわけでそのあたりをまとめてみる。</p>
+		<table class="center">
+			<tr>
+				<th colspan="2" rowspan="2"></th>
+				<th colspan="6">防御系スキル</th>
+			</tr>
+			<tr>
+				<th>回避</th>
+				<th>無敵</th>
+				<th>対粛正防御</th>
+				<th>防御力UP</th>
+				<th>ダメージカット</th>
+				<th>ガッツ</th>
+			</tr>
+			<tr>
+				<th class="vertical" rowspan="7">攻撃系スキル</th>
+				<th>必中</th>
+				<td class="skyblue">✕</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+			</tr>
+			<tr>
+				<th>無敵貫通</th>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+			</tr>
+			<tr>
+				<th>防御無視</th>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="skyblue">✕</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+			</tr>
+			<tr>
+				<th>回避解除</th>
+				<td class="skyblue">✕</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+			</tr>
+			<tr>
+				<th>無敵解除</th>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+				<td class="red">○</td>
+			</tr>
+			<tr>
+				<th>防御強化解除</th>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+				<td class="red">○</td>
+			</tr>
+			<tr>
+				<th>強化解除</th>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+				<td class="skyblue">✕</td>
+			</tr>
+		</table>
+		<ul>
+			<li>○…効果がある(防げる)</li>
+			<li>✕…効果がなくなる(防げない)</li>
+		</ul>
+		<p>ガッツは少し趣旨が異なるが、防御強化というジャンルには入らない(防御強化解除では剥がせない)ということを強調するために入れてみた。</p>
+		<p>個人的な意見ではあるが、回避が完全に無敵の下位互換となっているのは少しつまらないなあ……と思っていたりする。フレーバー的にも、ゲーム性的にも。無敵を貫通できるような強力な攻撃があったとして、そこに「避けても必ず当たる」という必中の効果が当然内包されるとはとても思えないし。まあ、攻撃時には面倒になりがちな無敵回避がどちらも無敵貫通でなんとかなる、というのは楽ではあるのだが。</p>
 	</main>
 </body>
 
