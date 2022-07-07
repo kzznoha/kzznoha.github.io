@@ -62,8 +62,7 @@ main {
 	font-size: 2.4rem;
 	padding: 2rem;
 	color: var(--back);
-	background-color: var(--accent1);
-	background-image: repeating-linear-gradient(-45deg, var(--accent1-bright), var(--accent1-bright) 5px, transparent 0, transparent 10px);
+	background: url(icons.svg#yagasuri);
 }
 #header a{
 	display: block;
