@@ -126,7 +126,15 @@ th{
 .fixed{
 	table-layout: fixed;
 }
+
 /*P*/
 p{
 	text-indent: 1em;
+}
+/*DECORATION*/
+.vertical{
+	writing-mode: vertical;
+}
+.center{
+	text-align: center;
 }
