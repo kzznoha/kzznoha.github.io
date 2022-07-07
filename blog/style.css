@@ -62,7 +62,7 @@ main {
 	font-size: 2.4rem;
 	padding: 2rem;
 	color: var(--back);
-	background: url('data:image/svg+xml;charset=utf-8,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='80' height='120' viewBox='0 0 80 120'%3e%3cpath fill='%23cccccc' d='M-40-60v240h160v-240z'/%3e%3cpath fill='%23808080' d='m0 0l19 19h2l19-19v60l-19 19h-2l-19-19zm19-60h2v240h-2zm21 0l19 19h2l19-19v60l-19 19h-2l-19-19zm19 0h2v240h-2zm-19 120l19 19h2l19-19v60l-19 19h-2l-19-19z'/%3e%3c/svg%3e');
+	background-color: var(--light);
 }
 #header a{
 	display: block;
