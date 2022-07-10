@@ -14,6 +14,8 @@ svg {
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	transform-origin: center;
+}
+*:not(defs *), .default {
 	stroke: var(--color);
 }
 
