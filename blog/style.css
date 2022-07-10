@@ -137,3 +137,11 @@ p{
 .center{
 	text-align: center;
 }
+
+.red {
+	color: var(--red);
+}
+
+.skyblue {
+	color: var(--skyblue);
+}
