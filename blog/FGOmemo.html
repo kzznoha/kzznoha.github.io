@@ -11,10 +11,10 @@
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="svg.css" />
 	<style>
-		.center{
+		.center {
 			text-align: center;
 		}
-		.vertical{
+		.vertical {
 			writing-mode: vertical-rl;
 		}
 	</style>
@@ -36,30 +36,38 @@
 		<h3>クラス相性図</h3>
 		<p>毎回ルーラーまわりの相性を間違えるので作ったもの。自画自賛になるが、公式の相性図よりは(多分)わかりやすい。</p>
 		<p>運営さん、フリー素材にするので採用してくれませんかね。</p>
-		<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" width="450" height="450" viewBox="0 0 450 450">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" width="450"
+			height="450" viewBox="0 0 450 450">
 			<title>FGOクラス相性図</title>
 			<defs>
 				<circle id="IconCircle" cx="0" cy="0" r="20" />
 				<filter id="weak_filter" filterUnits="userSpaceOnUse">
 					<feComponentTransfer>
-						<feFuncR type="linear" slope="0" intercept="1" /><!--255-->
-						<feFuncG type="linear" slope="0" intercept="0.072" /><!--75-->
-						<feFuncB type="linear" slope="0" intercept="0" /><!--0-->
+						<feFuncR type="linear" slope="0" intercept="1" />
+						<!--255-->
+						<feFuncG type="linear" slope="0" intercept="0.072" />
+						<!--75-->
+						<feFuncB type="linear" slope="0" intercept="0" />
+						<!--0-->
 					</feComponentTransfer>
 				</filter>
 				<filter id="resist_filter" filterUnits="userSpaceOnUse">
 					<feComponentTransfer>
-						<feFuncR type="linear" slope="0" intercept="0.078" /><!--77-->
-						<feFuncG type="linear" slope="0" intercept="0.55" /><!--196-->
-						<feFuncB type="linear" slope="0" intercept="1" /><!--255-->
+						<feFuncR type="linear" slope="0" intercept="0.078" />
+						<!--77-->
+						<feFuncG type="linear" slope="0" intercept="0.55" />
+						<!--196-->
+						<feFuncB type="linear" slope="0" intercept="1" />
+						<!--255-->
 					</feComponentTransfer>
 				</filter>
-				<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth" markerWidth="6" markerHeight="6">
+				<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth" markerWidth="6"
+					markerHeight="6">
 					<path class="fill" d="M 1,1 L 9,5 L 1,9 z" />
 				</marker>
 				<g id="deadlock">
 					<rect class="group" x="0" y="0" width="140" height="130" />
-					<!--<use class="default" href="#IconCircle" x="30" y="70" />-->
+					<use class="inherit" href="#IconCircle" x="30" y="70" />
 					<use class="icon" href="#IconCircle" x="110" y="100" />
 					<use class="icon" href="#IconCircle" x="30" y="100" />
 					<line class="weak" x1="90" x2="100" y1="64.5" y2="82" />
@@ -70,19 +78,17 @@
 					<line class="resist" x1="50" x2="40" y1="64.5" y2="82" />
 				</g>
 			</defs>
-		
-			<use class="icon" href="#IconCircle" x="220" y="40" />
-			<use class="icon" href="#IconCircle" x="40" y="220" />
-			<use class="icon" href="#IconCircle" x="400" y="220" />
+
 			<use class="icon weak" href="#IconCircle" x="220" y="400" />
-			<use class="icon weak half" href="#IconCircle" x="220" y="220" />
-			<use class="icon" href="#IconCircle" x="360" y="360" />
-		
+
 			<use href="#deadlock" x="150" y="10" />
 			<use href="#deadlock" x="160" y="10" transform="rotate(270)" />
 			<use href="#deadlock" x="150" y="20" transform="rotate(90)" />
-			<use href="#deadlock" x="160" y="20" transform="rotate(180)" />
-		
+			<use class="weak" href="#deadlock" x="160" y="20" transform="rotate(180)" />
+
+			<use class="icon weak half" href="#IconCircle" x="220" y="220" />
+			<use class="icon" href="#IconCircle" x="360" y="360" />
+
 			<text class="class" x="220" y="40">裁</text>
 			<text class="class" x="260" y="110">月</text>
 			<text class="class" x="180" y="110">讐</text>
@@ -97,7 +103,7 @@
 			<text class="class" x="180" y="330">詐</text>
 			<text class="class" x="220" y="220">狂</text>
 			<text class="class" x="360" y="360">盾</text>
-		
+
 			<line class="weak" x1="220" x2="220" y1="170" y2="200" />
 			<line class="weak half" x1="220" x2="220" y1="170" y2="140" />
 			<line class="weak" x1="170" x2="200" y1="220" y2="220" />
@@ -116,7 +122,7 @@
 			<line class="weak half" x1="274" x2="310" y1="316" y2="288" />
 			<line class="weak" x1="220" x2="220" y1="310" y2="240" />
 			<line class="resist" x1="220" x2="220" y1="310" y2="380" />
-		
+
 			<line class="weak" x1="25" x2="75" y1="320" y2="320" />
 			<text x="50" y="330">×2.0</text>
 			<line class="weak half" x1="25" x2="75" y1="350" y2="350" />
@@ -321,7 +327,9 @@
 			<li>✕…効果がなくなる(防げない)</li>
 		</ul>
 		<p>ガッツは少し趣旨が異なるが、防御強化というジャンルには入らない(防御強化解除では剥がせない)ということを強調するために入れてみた。</p>
-		<p>個人的な意見ではあるが、回避が完全に無敵の下位互換となっているのは少しつまらないなあ……と思っていたりする。フレーバー的にも、ゲーム性的にも。無敵を貫通できるような強力な攻撃があったとして、そこに「避けても必ず当たる」という必中の効果が当然内包されるとはとても思えないし。まあ、攻撃時には面倒になりがちな無敵回避がどちらも無敵貫通でなんとかなる、というのは楽ではあるのだが。</p>
+		<p>
+			個人的な意見ではあるが、回避が完全に無敵の下位互換となっているのは少しつまらないなあ……と思っていたりする。フレーバー的にも、ゲーム性的にも。無敵を貫通できるような強力な攻撃があったとして、そこに「避けても必ず当たる」という必中の効果が当然内包されるとはとても思えないし。まあ、攻撃時には面倒になりがちな無敵回避がどちらも無敵貫通でなんとかなる、というのは楽ではあるのだが。
+		</p>
 	</main>
 </body>
 
