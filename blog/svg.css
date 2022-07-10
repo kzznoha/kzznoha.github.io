@@ -30,7 +30,6 @@ text {
 /*OTHER*/
 .inherit {
 	stroke: inherit;
-	fill: inherit;
 }
 
 .fill {
