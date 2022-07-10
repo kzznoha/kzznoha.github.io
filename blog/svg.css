@@ -69,7 +69,7 @@ text.class {
 }
 
 .weak.half {
-	stroke-dasharray: 0 3 5 3;
+	stroke-dasharray: 0 3 3 3;
 }
 
 .resist:not(marker) {
