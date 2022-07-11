@@ -15,7 +15,8 @@ svg {
 	stroke-linejoin: round;
 	transform-origin: center;
 }
-*:not(defs *), .default{
+
+*:not(defs *) {
 	stroke: var(--color);
 }
 
@@ -32,6 +33,10 @@ text {
 /*OTHER*/
 .inherit {
 	stroke: inherit;
+}
+
+.default {
+	stroke: var(--color);
 }
 
 .fill {
