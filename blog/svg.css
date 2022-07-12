@@ -69,7 +69,7 @@ text.class {
 
 .resist {
 	stroke: var(--color);
-	filter: url(icons.svg"#resist_filter");
+	filter: url(icons.svg#resist_filter");
 	marker-end: url(#arrow);
 }
 
