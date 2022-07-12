@@ -63,13 +63,13 @@ text.class {
 /*COLOR*/
 .weak {
 	stroke: var(--color);
-	filter: url("#weak_filter");
+	filter: url(icons.svg#weak_filter);
 	marker-end: url(#arrow);
 }
 
 .resist {
 	stroke: var(--color);
-	filter: url("#resist_filter");
+	filter: url(icons.svg"#resist_filter");
 	marker-end: url(#arrow);
 }
 
