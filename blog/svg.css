@@ -16,7 +16,7 @@ svg {
 	transform-origin: center;
 }
 
-*:not(defs *) {
+*:not(.inherit, text) {
 	stroke: var(--color);
 }
 
