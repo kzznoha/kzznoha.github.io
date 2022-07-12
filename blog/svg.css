@@ -64,7 +64,7 @@ text.class {
 .weak {
 	stroke: var(--color);
 	filter: url("#weak_filter");
-	marker-end: url(icons.svg#arrow);
+	marker-end: url(#arrow);
 }
 
 .resist {
