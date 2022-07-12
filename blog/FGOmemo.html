@@ -46,27 +46,21 @@
 				<circle id="IconCircle" cx="0" cy="0" r="20" />
 				<filter id="weak_filter" filterUnits="userSpaceOnUse">
 					<feComponentTransfer>
-						<feFuncR type="linear" slope="0" intercept="1" />
-						<!--255-->
-						<feFuncG type="linear" slope="0" intercept="0.072" />
-						<!--75-->
-						<feFuncB type="linear" slope="0" intercept="0" />
-						<!--0-->
+						<feFuncR type="linear" slope="0" intercept="1" /><!--255-->
+						<feFuncG type="linear" slope="0" intercept="0.072" /><!--75-->
+						<feFuncB type="linear" slope="0" intercept="0" /><!--0-->
 					</feComponentTransfer>
 				</filter>
 				<filter id="resist_filter" filterUnits="userSpaceOnUse">
 					<feComponentTransfer>
-						<feFuncR type="linear" slope="0" intercept="0.078" />
-						<!--77-->
-						<feFuncG type="linear" slope="0" intercept="0.55" />
-						<!--196-->
-						<feFuncB type="linear" slope="0" intercept="1" />
-						<!--255-->
+						<feFuncR type="linear" slope="0" intercept="0.078" /><!--77-->
+						<feFuncG type="linear" slope="0" intercept="0.55" /><!--196-->
+						<feFuncB type="linear" slope="0" intercept="1" /><!--255-->
 					</feComponentTransfer>
 				</filter>
 				<g id="deadlock">
 					<rect class="group" x="0" y="0" width="140" height="130" />
-					<use href="#IconCircle" x="70" y="30" />
+					<use class="inherit" href="#IconCircle" x="70" y="30" />
 					<use class="icon" href="#IconCircle" x="110" y="100" />
 					<use class="icon" href="#IconCircle" x="30" y="100" />
 					<line class="weak" x1="90" x2="100" y1="64.5" y2="82" />
