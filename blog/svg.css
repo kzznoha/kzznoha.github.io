@@ -6,36 +6,33 @@
 
 /*CONTENT*/
 svg {
-	stroke-width: 1.5;
+	stroke-width: 1;
 	stroke-opacity: 1;
-}
-
-* {
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	transform-origin: center;
+	stroke: var(--color);
 }
 
-*:not(.inherit, text) {
-	stroke: var(--color);
+* {
+	stroke-width: inherit;
+	stroke-opacity: inherit;
+	stroke-linecap: inherit;
+	stroke-linejoin: inherit;
+	transform-origin: inherit;
+	stroke: inherit;
 }
 
 text {
 	font-family: "Noto Sans CJK JP", sans-serif;
-	font-size: 10px;
-	text-align: center;
+	font-size: 14px;
 	text-anchor: middle;
-	dominant-baseline: middle;
 	fill: var(--color);
 	stroke: none;
 }
 
 /*OTHER*/
-.inherit {
-	stroke: inherit;
-}
-
-.default {
+.stroke {
 	stroke: var(--color);
 }
 
@@ -50,30 +47,28 @@ rect.group {
 	ry: 20;
 }
 
-.icon {
-	stroke: var(--color);
-	fill: none;
-}
-
 /*TEXT*/
 text.class {
-	font-size: 14px;
+	text-align: center;
+	dominant-baseline: middle;
 }
 
 /*COLOR*/
+.arrow-end {
+	marker-end: url(#arrow-end);
+}
+
 .weak {
 	stroke: var(--color);
-	filter: url(icons.svg#weak_filter);
-	marker-end: url(#arrow);
+	filter: url(#weak_filter);
 }
 
 .resist {
 	stroke: var(--color);
-	filter: url(icons.svg#resist_filter);
-	marker-end: url(#arrow);
+	filter: url(#resist_filter);
 }
 
-.weak.half {
+.weak.half:not(marker) {
 	stroke-dasharray: 0 3 3 3;
 }
 
