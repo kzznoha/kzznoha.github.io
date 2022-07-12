@@ -12,6 +12,7 @@ svg {
 	stroke-linejoin: round;
 	transform-origin: center;
 	stroke: var(--color);
+	fill: none;
 }
 
 * {
@@ -21,6 +22,7 @@ svg {
 	stroke-linejoin: inherit;
 	transform-origin: inherit;
 	stroke: inherit;
+	fill: inherit;
 }
 
 text {
