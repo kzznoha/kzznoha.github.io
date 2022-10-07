@@ -120,7 +120,7 @@ summary {
 	list-style: none;
 	border: 2px solid var(--text);
 	transition: 0.2s;
-	padding: 1em;
+	padding: 8px;
 }
 summary::after {
 	content: "";
