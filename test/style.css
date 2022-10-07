@@ -142,7 +142,7 @@ details details summary{
 /*P*/
 p{
 	text-indent: 1em;
-	padding: 0 1em;	
+	padding-right: 1em;	
 }
 p:first-child{
 	padding-top: 1em;
@@ -150,6 +150,8 @@ p:first-child{
 p:last-child{
 	padding-bottom: 1em;
 }
+
+
 
 /*DESINE*/
 #toc{
@@ -301,6 +303,9 @@ strong, .strong{
 /*BLOCKQUOTE*/
 blockquote{
 	margin: 0.5em;
-	padding: 1em;
 	border: 5px double var(--text);
+}
+blockquote cite{
+	text-align: right;
+	padding-bottom: 1em;
 }
