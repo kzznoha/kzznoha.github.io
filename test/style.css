@@ -61,6 +61,10 @@ a {
 a:hover {
 	color: var(--sub);
 }
+/*RUBY*/
+rt{
+	font-size: 0.5em
+}
 
 /*DL*/
 dt {
@@ -113,29 +117,20 @@ table {
 
 /*DETAILS*/
 summary {
-	display: flex;
-	justify-content: space-between;
 	list-style: none;
 	border: 2px solid var(--text);
 	transition: 0.2s;
 	padding: 1em;
 }
 summary::after {
-	content: "expand_more";
-	align-self: center;
-	transform-origin: center;
-	transition: 0.2s;
-}
-details[open]>summary::after {
-	transform: rotate(180deg);
-	transition: 0.2s;
+	content: "";
 }
 summary:hover {
-	border-color: var(--main);
-	color: var(--main);
+	background-color: var(--text);
+	color: var(--back);
 }
 details>div {
-	padding: 1em;
+	padding-left: 1em;
 	border: 1px solid var(--text);
 	border-top: none;
 }
@@ -147,6 +142,7 @@ details details summary{
 /*P*/
 p{
 	text-indent: 1em;
+	padding: 1em;	
 }
 
 /*DESINE*/
