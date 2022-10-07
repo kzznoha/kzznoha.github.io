@@ -305,7 +305,12 @@ blockquote{
 	margin: 0.5em;
 	border: 5px double var(--text);
 }
-blockquote cite{
-	text-align: right;
+blockquote *{
+	padding: 0 1em;
+}
+blockquote *:first-child{
+	padding-top: 1em;
+}
+blockquote *:last-child{
 	padding-bottom: 1em;
 }
