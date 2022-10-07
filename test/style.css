@@ -144,6 +144,12 @@ p{
 	text-indent: 1em;
 	padding: 0 1em;	
 }
+p:first-child{
+	padding-top: 1em;
+}
+p:last-child{
+	padding-bottom: 1em;
+}
 
 /*DESINE*/
 #toc{
@@ -290,4 +296,11 @@ strong, .strong{
 .tree ul li:last-child::after {
 	top: -1em;
 	height: 2em;
+}
+
+/*BLOCKQUOTE*/
+blockquote{
+	margin: 0.5em;
+	padding: 1em;
+	border: 5px double var(--text);
 }
