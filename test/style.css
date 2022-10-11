@@ -196,7 +196,7 @@ main summary{
 }
 
 main details div>*{
-	margin-right: 10px;
+	margin-left: 10px;
 }
 main details div>*:first-child{
 	margin-top: 10px;
@@ -205,7 +205,7 @@ main details div>*:last-child{
 	margin-bottom: 10px;
 }
 main details div>*:not(details){
-	margin-left: 10px;
+	margin-right: 10px;
 }
 
 main aside{
