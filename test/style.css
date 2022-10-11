@@ -199,13 +199,13 @@ main details div>*{
 	margin-left: 10px;
 }
 main details div>*:first-child{
-	margin-top: 10px;
+	padding-top: 10px;
 }
 main details div>*:last-child{
-	margin-bottom: 10px;
+	padding-bottom: 10px;
 }
 main details div>*:not(details){
-	margin-right: 10px;
+	padding-right: 10px;
 }
 
 main aside{
