@@ -128,29 +128,28 @@ main dt::after{
 	content: "】";
 }
 main dd{
-	padding: 0 10px;
+	padding-left: 10px;
 }
 main aside{
-	margin: 10px;
-	paddng: 10px;
 	border: 1px dotted var(--text);
 }
-
-/*BLOCKQUOTE*/
 main blockquote{
-	margin: 10px;
-	padding: 10px;
 	border: 5px double var(--text);
 }
 
 
 /*DESIGN*/
-strong, .strong{
+main *:where(strong, .strong){
 	color: var(--main);
 }
-.center{
+main .center{
 	text-align: center;
 }
+main *:where(.box, dl, aside, blockquote){
+	margin: 10px;
+	paddng: 10px;
+}
+
 
 /*TREE*/
 .tree, tree ul{
