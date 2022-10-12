@@ -1,287 +1,171 @@
-*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+/*PALLETE*/
+:root{
+	--white: rgba(254, 254, 254, 1);
+	--lightgray: rgba(200, 200, 203, 0.8);
+	--gray: rgba(132, 145, 158, 0.8);
+	--black: rgba(0, 0, 0, 1);
+
+	--red: rgba(255, 75, 0, 1);
+	--yellow: rgba(255, 241, 0, 1);
+	--green: rgba(3, 175, 122, 1);
+	--blue: rgba(0, 90, 255, 1);
+	--skyblue: rgba(77, 196, 255, 1);
+	--pink: rgba(255, 128, 130, 1);
+	--orange: rgba(246, 170, 0, 1);
+	--purple: rgba(153, 0, 153, 1);
+	--brown: rgba(128, 64, 0, 1);
+
+	--bright-pink: rgba(255, 202, 191, 1);
+	--bright-cream: rgba(255, 255, 128, 1);
+	--bright-yellowgreen: rgba(216, 242, 85, 1);
+	--bright-skyblue: rgba(191, 228, 255, 1);
+	--bright-beige: rgba(255, 202, 128, 1);
+	--bright-green: rgba(119, 217, 168, 1);
+	--bright-purple: rgba(201, 172, 230, 1);
+}
+
+/*RESET*/
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)){
 	all: unset;
 	display: revert;
 }
-*, *::after, *::before {
+
+*, *::after, *::before{
 	box-sizing: border-box;
-	font: inherit;
 	margin: 0;
 	padding: 0;
+	font: inherit;
+	color: inherit;
+	text-decoration: none;
+	background-color: transparent;
 }
-html {
-	font-size: 62.5%;
-}
-body {
+html{
+	width: 100%;
 	min-height: 100vh;
 	word-break: break-word;
 	overflow-wrap: break-word;
 	text-align: justify;
 	font-synthesis: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hr, blockquote, img{
+	display: block;
+	max-width: 100%;
+}
 
-	font: 1.8rem/2 "Noto Sans CJK JP", sans-serif;
+/*ROOT*/
+:root{
+	--main: var(--red);
+	--sub: var(--skyblue);
+	--gray: var(--gray);
+	--back: var(--black);
+	--text: var(--white);
+}
+
+/*STANDARD*/
+body{
+	font: 16px/2 sans-serif;
 	background-color: var(--back);
 	color: var(--text);
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hr, blockquote, img {
-	display: block;
-}
-
-/*TEST*/
-/*ROOT*/
-:root {
-	--main: rgba(70, 177, 190, 1);
-	--main-5: rgba(70, 177, 190, 0.5);
-	--sub: rgba(190, 78, 70, 1);
-	--sub-5: rgba(190, 78, 70, 0.5);
-	--gray: rgba(197, 190, 196, 0.1);
-	--back: rgba(0, 13, 16, 1);
-	--text: rgba(230, 251, 255, 1);
-}
-
-/*ICONS*/
-@font-face {
-	font-family: "Material Icons";
-	src: url(icon.woff2) format('woff2');
-}
-.icon, summary::after, #page-top {
-	font: 2.4rem/2.4rem "Material Icons";
-	letter-spacing: normal;
-	text-transform: none;
-	white-space: nowrap;
-	word-wrap: normal;
-	display: inline-block;
-	width: 2.4rem;
-	height: 2.4rem;
-}
-
-/*A*/
-a {
+a{
 	color: var(--main);
+	
 }
-a:hover {
+a:hover{
 	color: var(--sub);
 }
-/*RUBY*/
 rt{
 	font-size: 0.5em
 }
-
-/*DL*/
-dt {
-	font-style: normal;
-	color: var(--main);
-	font-size: 1.2em;
-}
-dt::before {
-	content: "【";
-	color: var(--text);
-}
-dt::after {
-	content: "】";
-	color: var(--text);
-}
-dd {
-	padding: 0 1em;
-}
-
-/*LIST*/
 ol, ul {
 	list-style-position: outside;
-	margin-left: 2em;
+	margin-left: 20px;
 }
-ol {
-	list-style-type: decimal;
-}
-ul {
-	list-style-type: square;
-}
-
-/*TABLE*/
-table {
-	width: 100%;
-	border-collapse: collapse;
-
-}
-*:where(th, td) {
-	padding: 0.5em;
-	vertical-align: middle;
-	border: 1px solid var(--text);
-}
-.fix{
-	table-layout: fixed;
-}
-.row td{
-	width: 100%;
-	display: block;
-}
-
-/*DETAILS*/
-summary {
-	list-style: none;
-	border: 2px solid var(--text);
-	transition: 0.2s;
-	padding: 8px;
-}
-summary::after {
-	content: "";
-}
-summary:hover {
-	background-color: var(--text);
-	color: var(--back);
-}
-details>div {
-	padding-left: 1em;
-	border: 1px solid var(--text);
-	border-top: none;
-}
-details details summary{
-	font-size: 1em;
-	border: solid 1px var(--text);
-}
-
-/*P*/
 p{
 	text-indent: 1em;
 }
-
-/*DESINE*/
-#toc{
-	position: fixed;
-	width: 90vw;
-	top: 1rem;
-	left: calc(50% - 90vw/2);
-	background-color: var(--back);
-	z-index: 10;
+table{
+	max-width: 100%;
+	border-collapse: collapse;
 }
-#toc summary:hover{
-	color: var(--sub);
-	border-color: var(--sub);
-}
-#toc *:where(ul, ol){
-	margin: 0;
-	list-style: none;
-}
-#toc *:where(ul, ol) li a{
-	display: block;
-	margin: 0.2rem 0;
-	padding: 0.1rem;
-	color: var(--text);
-	background-color: var(--gray);
-}
-#toc *:where(ul, ol) li a:hover{
-	color: var(--sub);
-	background-color: var(--back);
-}
-#toc *:where(ul, ol) *:where(ul, ol){
-	padding-left: 1em;
-}
-
-main{
-	width: 100%;
-	padding: 1rem;
-	margin: 10rem 0 30rem 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-main details{
-	width: 100%;
-}
-main summary{
-	margin: 1rem 0;
-	padding: 0 1rem;
-	font-size: 1.5em;
-	border: solid 3px var(--main);
-	background: repeating-linear-gradient(-45deg, transparent, transparent 3px, var(--gray) 3px, var(--gray) 6px);
-}
-
-main details div>*{
-	margin-left: 10px;
-}
-main details div>*:first-child{
-	padding-top: 10px;
-}
-main details div>*:last-child{
-	padding-bottom: 10px;
-}
-main details div>*:not(details){
-	padding-right: 10px;
-}
-
-main aside{
-	margin: 1em 1rem;
-	padding: 1.5rem;
+th, td{
+	padding: 10px;
+	vertical-align: middle;
 	border: 1px solid var(--text);
-	position: relative;
-	text-indent: none;
 }
-main aside::before{
-	content: attr(data-title);
-	background-color: var(--back);
-	display: inline-block;
-	line-height: 1;
-	position: absolute;
-	top: -0.5em;
-	left: 0.8em;
-	font-size: 1.1em;
-	text-indent: none;
+summary{
+	display: block;
 }
 
-/*PAGETOP*/
 
-#page-top::before {
-	content: "arrow_upward";
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	right: 2rem;
-	bottom: 2rem;
-	width: 5rem;
-	height: 5rem;
-	font-size: 3rem;
-	color: var(--sub);
+/*ARTICLES*/
+main details>summary{
+	padding: 5px 10px;
+	border: 2px solid var(--gray);
+}
+main details>summary::hover{
 	background-color: var(--gray);
-	border-radius: 50%;
-	border: 2px solid var(--sub);
-}
-#page-top:hover::before {
 	color: var(--back);
-	background-color: var(--sub);
+}
+main details>div{
+	padding: 10px 0 10px 10px;
+}
+main details>div>*:not(details){
+	padding-left: 10px;
 }
 
-/**/
+main dl{
+	background-color var(--gray);
+}
+main dt{
+	font-style: normal;
+	font-size: 1.1em;
+}
+main dt::before{
+	content: "【";
+}
+main dt::after{
+	content: "】";
+}
+main dd{
+	padding: 0 10px;
+}
+main aside{
+	margin: 10px;
+	paddng: 10px;
+	border: 1px dotted var(--text);
+}
+
+/*BLOCKQUOTE*/
+main blockquote{
+	margin: 10px;
+	padding: 10px;
+	border: 5px double var(--text);
+}
+
+
+/*DESIGN*/
 strong, .strong{
 	color: var(--main);
-}
-.main{
-	background: repeating-linear-gradient(-45deg, transparent, transparent 1px, var(--main-5) 1px, var(--main-5) 2px);
-}
-.sub{
-	background: repeating-linear-gradient(-45deg, transparent, transparent 1px, var(--sub-5) 1px, var(--sub-5) 2px);
 }
 .center{
 	text-align: center;
 }
-.small{
-	font-size: 0.8em;
-}
 
 /*TREE*/
-.tree {
+.tree, tree ul{
 	list-style-type: none;
 }
-.tree ul {
-	list-style-type: none;
+.tree ul{
 	margin: 0;
 	padding: 0;
 }
-.tree ul li {
+.tree ul li{
 	position: relative;
 	list-style-type: none;
 	padding-left: calc(0.5em + 24px);
 }
-.tree ul li::before {
+.tree ul li::before{
 	content: "";
 	display: block;
 	position: absolute;
@@ -290,7 +174,7 @@ strong, .strong{
 	width: 20px;
 	border-top: 2px solid var(--text);
 }
-.tree ul li::after {
+.tree ul li::after{
 	content: "";
 	display: block;
 	position: absolute;
@@ -300,22 +184,8 @@ strong, .strong{
 	left: 0.5em;
 	border-left: 2px solid var(--text);
 }
-.tree ul li:last-child::after {
+.tree ul li:last-child::after{
 	top: -1em;
 	height: 2em;
 }
 
-/*BLOCKQUOTE*/
-blockquote{
-	margin: 0.5em;
-	border: 5px double var(--text);
-}
-blockquote>*{
-	padding: 0 1em;
-}
-blockquote>*:first-child{
-	padding-top: 1em;
-}
-blockquote>*:last-child{
-	padding-bottom: 1em;
-}
