@@ -111,7 +111,7 @@ main details>div{
 	padding: 10px 0 10px 10px;
 }
 main details>div>*:not(details){
-	padding-left: 10px;
+	padding-right: 10px;
 }
 
 main dl{
