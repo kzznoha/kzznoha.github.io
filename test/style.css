@@ -101,14 +101,15 @@ summary{
 /*ARTICLES*/
 main details>summary{
 	padding: 5px 10px;
-	border: 2px solid var(--light);
+	border: 2px solid var(--text);
 }
-main details>summary::hover{
-	background-color: var(--light);
+main details>summary:hover{
+	background-color: var(--text);
 	color: var(--back);
 }
 main details>div{
 	padding: 10px 0 10px 10px;
+	background-color: rgba(30, 30, 30, 1);
 }
 main details>div>*:not(details){
 	padding-right: 10px;
