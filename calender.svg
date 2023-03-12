@@ -647,7 +647,7 @@
 
 
 		async function dataLoad () {
-			const url = "https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv";
+			const url = "syukujitsu.csv";
 			const response = await fetch(url, {mode: "no-cors"});
 			const ab       = await response.arrayBuffer();
 			const datas    = new TextDecoder("Shift-JIS").decode(ab).split(/\r\n/);
